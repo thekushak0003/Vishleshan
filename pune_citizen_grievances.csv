@@ -1,0 +1,1001 @@
+Date,Zone_Name,Ticket_ID,Department,Issue_Type,Status,SLA_Days
+2025-01-11,Viman Nagar,PMC25657,Traffic,Illegal Parking,Open,4
+2025-01-26,Viman Nagar,PMC71006,Water,Contaminated Water,Open,1
+2025-01-14,Swargate,PMC73440,Waste,Dead Animal,In Progress,3
+2025-01-15,Viman Nagar,PMC16031,Waste,Dead Animal,Open,3
+2025-01-14,Koregaon Park,PMC54975,Water,No Water Supply,Resolved,2
+2025-01-06,Kothrud,PMC77497,Water,No Water Supply,Resolved,3
+2025-01-23,Kothrud,PMC86434,Energy,Frequent Power Cut,Resolved,3
+2025-01-04,Swargate,PMC52330,Energy,Frequent Power Cut,Resolved,2
+2025-01-29,Hinjewadi,PMC28528,Traffic,Illegal Parking,Resolved,4
+2025-01-10,Viman Nagar,PMC36628,Waste,Dead Animal,Open,1
+2025-01-22,Viman Nagar,PMC31065,Water,Contaminated Water,Resolved,2
+2025-01-19,Koregaon Park,PMC95139,Traffic,Traffic Signal Not Working,Resolved,2
+2025-01-15,Viman Nagar,PMC80855,Traffic,Potholes,Resolved,3
+2025-01-14,Koregaon Park,PMC52773,Traffic,Traffic Signal Not Working,Open,1
+2025-01-02,Swargate,PMC93680,Waste,Dead Animal,Open,1
+2025-01-19,Kothrud,PMC35084,Water,No Water Supply,Open,2
+2025-01-29,Viman Nagar,PMC18569,Traffic,Traffic Signal Not Working,Resolved,1
+2025-01-16,Kothrud,PMC44847,Traffic,Illegal Parking,Open,4
+2025-01-07,Swargate,PMC41579,Waste,Garbage Dumped on Road,Resolved,1
+2025-01-24,Hinjewadi,PMC92929,Traffic,Potholes,In Progress,2
+2025-01-11,Swargate,PMC47733,Traffic,Potholes,Resolved,4
+2025-01-12,Hinjewadi,PMC65707,Traffic,Potholes,Resolved,1
+2025-01-08,Kothrud,PMC36805,Water,Contaminated Water,Open,4
+2025-01-05,Viman Nagar,PMC95849,Water,Contaminated Water,Resolved,2
+2025-01-06,Koregaon Park,PMC78680,Water,Contaminated Water,Resolved,2
+2025-01-05,Koregaon Park,PMC91139,Energy,Frequent Power Cut,Resolved,4
+2025-01-07,Kothrud,PMC11762,Traffic,Traffic Signal Not Working,Resolved,2
+2025-01-16,Kothrud,PMC53600,Traffic,Potholes,Open,4
+2025-01-02,Swargate,PMC92439,Traffic,Illegal Parking,Resolved,4
+2025-01-12,Koregaon Park,PMC99385,Traffic,Potholes,Resolved,2
+2025-01-24,Swargate,PMC98868,Waste,Bin Overflowing,Open,2
+2025-01-06,Hadapsar,PMC19082,Traffic,Illegal Parking,In Progress,3
+2025-01-13,Kothrud,PMC26099,Energy,Frequent Power Cut,Resolved,2
+2025-01-19,Viman Nagar,PMC83953,Energy,Meter Fault,Open,4
+2025-01-03,Hadapsar,PMC66012,Traffic,Potholes,Resolved,2
+2025-01-29,Hadapsar,PMC36921,Energy,Meter Fault,In Progress,2
+2025-01-19,Swargate,PMC65982,Water,No Water Supply,Open,3
+2025-01-13,Hadapsar,PMC85237,Energy,Meter Fault,Open,2
+2025-01-14,Hadapsar,PMC72783,Traffic,Potholes,Resolved,4
+2025-01-19,Koregaon Park,PMC54378,Traffic,Illegal Parking,In Progress,1
+2025-01-20,Hadapsar,PMC15527,Waste,Bin Overflowing,Open,1
+2025-01-22,Kothrud,PMC78462,Energy,Frequent Power Cut,Resolved,1
+2025-01-19,Hinjewadi,PMC86948,Water,Contaminated Water,In Progress,2
+2025-01-12,Koregaon Park,PMC60106,Water,Contaminated Water,Open,2
+2025-01-07,Koregaon Park,PMC36148,Water,Contaminated Water,Resolved,1
+2025-01-05,Hinjewadi,PMC88985,Traffic,Potholes,Resolved,2
+2025-01-13,Viman Nagar,PMC63952,Traffic,Illegal Parking,Resolved,1
+2025-01-11,Hadapsar,PMC95258,Energy,Frequent Power Cut,Open,1
+2025-01-12,Hinjewadi,PMC59141,Traffic,Potholes,Resolved,3
+2025-01-09,Koregaon Park,PMC50564,Water,No Water Supply,Resolved,1
+2025-01-30,Viman Nagar,PMC42001,Water,No Water Supply,Resolved,2
+2025-01-30,Hinjewadi,PMC63686,Traffic,Illegal Parking,Resolved,2
+2025-01-05,Kothrud,PMC18606,Energy,Meter Fault,Open,4
+2025-01-07,Hadapsar,PMC62331,Traffic,Illegal Parking,Resolved,4
+2025-01-17,Koregaon Park,PMC13836,Energy,Meter Fault,Resolved,1
+2025-01-04,Swargate,PMC61220,Waste,Garbage Dumped on Road,Open,4
+2025-01-20,Hadapsar,PMC50441,Waste,Dead Animal,Open,2
+2025-01-08,Hadapsar,PMC16727,Waste,Dead Animal,Resolved,2
+2025-01-07,Hinjewadi,PMC19140,Traffic,Illegal Parking,Open,3
+2025-01-22,Viman Nagar,PMC98108,Energy,Meter Fault,Open,4
+2025-01-18,Koregaon Park,PMC27474,Waste,Dead Animal,Resolved,2
+2025-01-19,Viman Nagar,PMC17671,Waste,Bin Overflowing,Open,2
+2025-01-15,Kothrud,PMC50302,Water,No Water Supply,Resolved,3
+2025-01-05,Hadapsar,PMC54760,Waste,Dead Animal,Resolved,3
+2025-01-21,Koregaon Park,PMC68328,Traffic,Illegal Parking,Resolved,2
+2025-01-04,Viman Nagar,PMC91291,Water,No Water Supply,Resolved,2
+2025-01-18,Hinjewadi,PMC41090,Traffic,Illegal Parking,Open,3
+2025-01-22,Viman Nagar,PMC27388,Water,No Water Supply,Open,2
+2025-01-23,Viman Nagar,PMC84472,Waste,Dead Animal,Resolved,2
+2025-01-21,Viman Nagar,PMC55486,Water,No Water Supply,Open,3
+2025-01-28,Viman Nagar,PMC39104,Energy,Meter Fault,Resolved,3
+2025-01-18,Kothrud,PMC22308,Traffic,Illegal Parking,Open,2
+2025-01-20,Viman Nagar,PMC57110,Energy,Frequent Power Cut,Resolved,4
+2025-01-12,Hadapsar,PMC54112,Traffic,Illegal Parking,Resolved,4
+2025-01-03,Hadapsar,PMC53970,Energy,Meter Fault,Open,4
+2025-01-26,Swargate,PMC26359,Traffic,Illegal Parking,Open,4
+2025-01-19,Koregaon Park,PMC83172,Water,Contaminated Water,In Progress,1
+2025-01-24,Koregaon Park,PMC46161,Traffic,Potholes,Resolved,3
+2025-01-09,Kothrud,PMC54413,Waste,Garbage Dumped on Road,Resolved,2
+2025-01-15,Viman Nagar,PMC40761,Water,Contaminated Water,Resolved,2
+2025-01-28,Hinjewadi,PMC80823,Traffic,Potholes,Open,4
+2025-01-17,Hadapsar,PMC79563,Waste,Dead Animal,Resolved,1
+2025-01-04,Swargate,PMC70697,Water,No Water Supply,Resolved,1
+2025-01-26,Hinjewadi,PMC68236,Traffic,Potholes,Open,4
+2025-01-07,Hadapsar,PMC82001,Water,No Water Supply,Open,4
+2025-01-18,Hadapsar,PMC65995,Waste,Bin Overflowing,Resolved,1
+2025-01-16,Swargate,PMC16452,Energy,Frequent Power Cut,Resolved,2
+2025-01-15,Viman Nagar,PMC35990,Waste,Bin Overflowing,Open,4
+2025-01-30,Koregaon Park,PMC52239,Energy,Meter Fault,Resolved,1
+2025-01-15,Swargate,PMC23447,Water,No Water Supply,Open,1
+2025-01-20,Viman Nagar,PMC59092,Waste,Dead Animal,Open,1
+2025-01-08,Swargate,PMC99596,Traffic,Illegal Parking,In Progress,3
+2025-01-03,Viman Nagar,PMC15345,Water,Contaminated Water,Open,1
+2025-01-06,Viman Nagar,PMC22276,Energy,Frequent Power Cut,Resolved,4
+2025-01-07,Kothrud,PMC89296,Energy,Frequent Power Cut,In Progress,1
+2025-01-24,Koregaon Park,PMC55070,Traffic,Traffic Signal Not Working,Resolved,2
+2025-01-03,Kothrud,PMC34862,Water,No Water Supply,Resolved,1
+2025-01-27,Hinjewadi,PMC97197,Traffic,Traffic Signal Not Working,Resolved,2
+2025-01-27,Hadapsar,PMC53903,Water,No Water Supply,Resolved,4
+2025-01-02,Swargate,PMC83938,Water,No Water Supply,Resolved,2
+2025-01-11,Kothrud,PMC93534,Water,Contaminated Water,In Progress,3
+2025-01-17,Kothrud,PMC66387,Energy,Meter Fault,Resolved,1
+2025-01-03,Koregaon Park,PMC50873,Energy,Frequent Power Cut,In Progress,2
+2025-01-12,Swargate,PMC70643,Traffic,Potholes,Resolved,3
+2025-01-09,Koregaon Park,PMC50826,Traffic,Traffic Signal Not Working,Resolved,2
+2025-01-30,Kothrud,PMC70024,Traffic,Traffic Signal Not Working,Resolved,2
+2025-01-13,Swargate,PMC25878,Water,No Water Supply,Resolved,4
+2025-01-19,Hinjewadi,PMC99673,Traffic,Traffic Signal Not Working,Resolved,1
+2025-01-10,Koregaon Park,PMC11391,Waste,Garbage Dumped on Road,Open,4
+2025-01-25,Hadapsar,PMC41712,Energy,Meter Fault,Resolved,2
+2025-01-22,Swargate,PMC23819,Energy,Frequent Power Cut,Resolved,4
+2025-01-16,Hinjewadi,PMC38411,Waste,Bin Overflowing,Resolved,1
+2025-01-27,Hadapsar,PMC86145,Water,Contaminated Water,Resolved,3
+2025-01-20,Viman Nagar,PMC20880,Waste,Bin Overflowing,Resolved,1
+2025-01-07,Koregaon Park,PMC16244,Water,No Water Supply,Open,4
+2025-01-02,Kothrud,PMC79811,Water,No Water Supply,Resolved,2
+2025-01-15,Kothrud,PMC49566,Waste,Bin Overflowing,In Progress,3
+2025-01-02,Viman Nagar,PMC62283,Waste,Bin Overflowing,Resolved,1
+2025-01-02,Swargate,PMC47884,Water,Contaminated Water,Resolved,4
+2025-01-24,Viman Nagar,PMC82328,Water,Contaminated Water,Resolved,1
+2025-01-09,Viman Nagar,PMC99698,Water,No Water Supply,Resolved,2
+2025-01-08,Hinjewadi,PMC26660,Traffic,Illegal Parking,Resolved,3
+2025-01-07,Koregaon Park,PMC14456,Traffic,Potholes,Resolved,4
+2025-01-21,Hadapsar,PMC40912,Traffic,Potholes,Resolved,2
+2025-01-26,Viman Nagar,PMC71390,Energy,Frequent Power Cut,Resolved,3
+2025-01-14,Swargate,PMC54371,Waste,Garbage Dumped on Road,Resolved,2
+2025-01-29,Swargate,PMC94711,Water,Contaminated Water,Open,3
+2025-01-29,Koregaon Park,PMC51719,Water,Contaminated Water,Resolved,4
+2025-01-17,Hadapsar,PMC67414,Energy,Meter Fault,Open,3
+2025-01-04,Koregaon Park,PMC94196,Energy,Frequent Power Cut,Resolved,3
+2025-01-03,Viman Nagar,PMC70713,Water,No Water Supply,In Progress,3
+2025-01-16,Swargate,PMC73641,Waste,Bin Overflowing,Resolved,4
+2025-01-18,Hinjewadi,PMC90669,Waste,Garbage Dumped on Road,Open,2
+2025-01-19,Hinjewadi,PMC31506,Traffic,Potholes,Resolved,2
+2025-01-30,Swargate,PMC17937,Energy,Frequent Power Cut,Resolved,3
+2025-01-05,Koregaon Park,PMC59782,Traffic,Traffic Signal Not Working,Resolved,1
+2025-01-20,Swargate,PMC36771,Waste,Garbage Dumped on Road,Resolved,3
+2025-01-23,Viman Nagar,PMC94553,Traffic,Illegal Parking,Resolved,2
+2025-01-14,Hinjewadi,PMC13392,Traffic,Potholes,Open,1
+2025-01-20,Koregaon Park,PMC12023,Energy,Voltage Fluctuation,Resolved,4
+2025-01-21,Koregaon Park,PMC98491,Traffic,Traffic Signal Not Working,Resolved,4
+2025-01-26,Hadapsar,PMC17611,Water,Contaminated Water,Resolved,2
+2025-01-29,Hinjewadi,PMC40964,Water,No Water Supply,Resolved,2
+2025-01-02,Hadapsar,PMC55619,Waste,Bin Overflowing,Resolved,2
+2025-01-01,Viman Nagar,PMC45937,Energy,Meter Fault,Resolved,3
+2025-01-12,Viman Nagar,PMC23891,Waste,Dead Animal,Resolved,4
+2025-01-03,Hinjewadi,PMC84192,Energy,Voltage Fluctuation,Resolved,1
+2025-01-27,Hadapsar,PMC33537,Waste,Dead Animal,Resolved,2
+2025-01-08,Swargate,PMC31493,Energy,Frequent Power Cut,Resolved,3
+2025-01-15,Swargate,PMC70424,Traffic,Potholes,Resolved,1
+2025-01-07,Hadapsar,PMC93460,Water,Contaminated Water,Open,4
+2025-01-14,Viman Nagar,PMC48708,Water,Contaminated Water,Resolved,4
+2025-01-22,Koregaon Park,PMC49273,Water,No Water Supply,Open,1
+2025-01-23,Swargate,PMC63102,Waste,Garbage Dumped on Road,Resolved,4
+2025-01-05,Hinjewadi,PMC77254,Traffic,Illegal Parking,Resolved,3
+2025-01-02,Swargate,PMC15762,Water,Contaminated Water,Resolved,4
+2025-01-23,Hadapsar,PMC12435,Energy,Frequent Power Cut,Open,3
+2025-01-19,Koregaon Park,PMC77299,Waste,Bin Overflowing,Resolved,4
+2025-01-27,Hinjewadi,PMC73805,Energy,Frequent Power Cut,Resolved,3
+2025-01-26,Hadapsar,PMC41724,Water,Contaminated Water,Open,4
+2025-01-11,Hinjewadi,PMC76555,Waste,Garbage Dumped on Road,Resolved,1
+2025-01-23,Koregaon Park,PMC63092,Water,No Water Supply,Resolved,1
+2025-01-24,Kothrud,PMC75194,Water,No Water Supply,Resolved,4
+2025-01-04,Swargate,PMC71555,Traffic,Illegal Parking,Resolved,1
+2025-01-04,Swargate,PMC91253,Traffic,Traffic Signal Not Working,Open,3
+2025-01-01,Koregaon Park,PMC84326,Traffic,Potholes,Resolved,3
+2025-01-03,Koregaon Park,PMC12651,Water,No Water Supply,Resolved,4
+2025-01-17,Kothrud,PMC17987,Energy,Meter Fault,In Progress,2
+2025-01-10,Hadapsar,PMC27410,Traffic,Potholes,Open,2
+2025-01-17,Kothrud,PMC52117,Waste,Dead Animal,In Progress,3
+2025-01-19,Hadapsar,PMC33554,Energy,Frequent Power Cut,Open,1
+2025-01-02,Koregaon Park,PMC72129,Energy,Frequent Power Cut,Open,3
+2025-01-13,Hinjewadi,PMC71976,Traffic,Illegal Parking,Open,1
+2025-01-21,Koregaon Park,PMC41343,Traffic,Potholes,Open,3
+2025-01-20,Hadapsar,PMC39503,Water,Contaminated Water,Resolved,2
+2025-01-26,Kothrud,PMC29282,Water,No Water Supply,Resolved,1
+2025-01-07,Hadapsar,PMC85367,Waste,Bin Overflowing,Resolved,4
+2025-01-16,Koregaon Park,PMC46780,Energy,Meter Fault,Resolved,4
+2025-01-04,Swargate,PMC69361,Energy,Frequent Power Cut,Resolved,2
+2025-01-07,Hadapsar,PMC71668,Traffic,Potholes,Open,4
+2025-01-19,Koregaon Park,PMC12528,Traffic,Illegal Parking,Resolved,1
+2025-01-24,Hadapsar,PMC34932,Energy,Voltage Fluctuation,Open,2
+2025-01-11,Hinjewadi,PMC93627,Traffic,Traffic Signal Not Working,Open,2
+2025-01-10,Koregaon Park,PMC58675,Water,Contaminated Water,Open,1
+2025-01-16,Hadapsar,PMC80743,Energy,Frequent Power Cut,Open,3
+2025-01-01,Swargate,PMC59174,Traffic,Potholes,Resolved,4
+2025-01-09,Swargate,PMC82887,Energy,Frequent Power Cut,Resolved,4
+2025-01-11,Swargate,PMC43127,Water,No Water Supply,In Progress,1
+2025-01-17,Hinjewadi,PMC30517,Energy,Voltage Fluctuation,Resolved,2
+2025-01-09,Hadapsar,PMC48618,Waste,Garbage Dumped on Road,Resolved,4
+2025-01-25,Koregaon Park,PMC80732,Energy,Frequent Power Cut,Resolved,1
+2025-01-27,Kothrud,PMC20790,Waste,Dead Animal,Resolved,1
+2025-01-14,Viman Nagar,PMC72431,Waste,Dead Animal,Resolved,3
+2025-01-21,Hadapsar,PMC77521,Water,Contaminated Water,Resolved,4
+2025-01-21,Kothrud,PMC90944,Water,No Water Supply,Resolved,2
+2025-01-10,Hinjewadi,PMC54108,Energy,Meter Fault,Open,2
+2025-01-25,Kothrud,PMC32359,Water,No Water Supply,Resolved,4
+2025-01-10,Koregaon Park,PMC76252,Water,No Water Supply,Resolved,2
+2025-01-21,Hinjewadi,PMC24133,Traffic,Traffic Signal Not Working,Resolved,3
+2025-01-04,Swargate,PMC94495,Water,No Water Supply,Resolved,1
+2025-01-05,Swargate,PMC29546,Traffic,Illegal Parking,Open,4
+2025-01-04,Hadapsar,PMC96848,Energy,Meter Fault,Resolved,4
+2025-01-16,Hinjewadi,PMC40265,Traffic,Traffic Signal Not Working,Resolved,2
+2025-01-02,Swargate,PMC25401,Water,No Water Supply,Resolved,4
+2025-01-24,Hadapsar,PMC17513,Energy,Meter Fault,In Progress,2
+2025-01-20,Koregaon Park,PMC63484,Water,Contaminated Water,Resolved,1
+2025-01-03,Viman Nagar,PMC59536,Energy,Meter Fault,Resolved,4
+2025-01-13,Viman Nagar,PMC79142,Traffic,Potholes,Resolved,1
+2025-01-15,Kothrud,PMC22470,Waste,Garbage Dumped on Road,Resolved,2
+2025-01-09,Swargate,PMC73200,Energy,Frequent Power Cut,In Progress,1
+2025-01-23,Hadapsar,PMC19158,Waste,Garbage Dumped on Road,Resolved,1
+2025-01-03,Kothrud,PMC63868,Energy,Frequent Power Cut,Resolved,2
+2025-01-16,Kothrud,PMC88516,Energy,Meter Fault,Resolved,3
+2025-01-30,Viman Nagar,PMC70649,Waste,Bin Overflowing,Resolved,4
+2025-01-01,Swargate,PMC69406,Waste,Garbage Dumped on Road,Resolved,2
+2025-01-10,Viman Nagar,PMC61183,Water,No Water Supply,In Progress,3
+2025-01-11,Kothrud,PMC30878,Energy,Voltage Fluctuation,Open,4
+2025-01-11,Swargate,PMC10010,Traffic,Potholes,Resolved,3
+2025-01-16,Hinjewadi,PMC19396,Water,No Water Supply,Open,4
+2025-01-19,Koregaon Park,PMC49477,Traffic,Illegal Parking,Resolved,2
+2025-01-06,Viman Nagar,PMC12615,Energy,Frequent Power Cut,Resolved,3
+2025-01-03,Swargate,PMC60176,Energy,Meter Fault,Resolved,4
+2025-01-23,Hadapsar,PMC33520,Traffic,Potholes,Resolved,4
+2025-01-07,Koregaon Park,PMC34420,Water,Contaminated Water,Open,4
+2025-01-24,Viman Nagar,PMC47670,Energy,Meter Fault,Resolved,2
+2025-01-24,Hadapsar,PMC22463,Traffic,Traffic Signal Not Working,Resolved,3
+2025-01-27,Kothrud,PMC69758,Traffic,Illegal Parking,Open,4
+2025-01-13,Hadapsar,PMC12689,Traffic,Potholes,Resolved,2
+2025-01-07,Viman Nagar,PMC17578,Waste,Dead Animal,Resolved,3
+2025-01-26,Koregaon Park,PMC12113,Traffic,Illegal Parking,Resolved,3
+2025-01-03,Hinjewadi,PMC22086,Traffic,Traffic Signal Not Working,Resolved,3
+2025-01-25,Viman Nagar,PMC79276,Waste,Bin Overflowing,Open,3
+2025-01-28,Swargate,PMC75448,Energy,Meter Fault,Resolved,2
+2025-01-08,Hinjewadi,PMC52619,Waste,Dead Animal,Resolved,4
+2025-01-29,Hadapsar,PMC53346,Waste,Garbage Dumped on Road,In Progress,4
+2025-01-16,Koregaon Park,PMC68682,Water,Contaminated Water,Open,3
+2025-01-19,Hadapsar,PMC11018,Traffic,Potholes,Open,2
+2025-01-20,Swargate,PMC69951,Energy,Voltage Fluctuation,Resolved,2
+2025-01-21,Kothrud,PMC23525,Traffic,Illegal Parking,Open,1
+2025-01-28,Viman Nagar,PMC12117,Water,Contaminated Water,Resolved,3
+2025-01-26,Koregaon Park,PMC95454,Waste,Dead Animal,Open,3
+2025-01-06,Swargate,PMC92069,Waste,Bin Overflowing,Resolved,1
+2025-01-11,Viman Nagar,PMC78214,Energy,Voltage Fluctuation,Resolved,2
+2025-01-13,Koregaon Park,PMC33582,Energy,Voltage Fluctuation,Open,4
+2025-01-15,Hinjewadi,PMC52136,Traffic,Traffic Signal Not Working,Open,1
+2025-01-17,Kothrud,PMC59296,Water,No Water Supply,Resolved,1
+2025-01-27,Koregaon Park,PMC66909,Energy,Voltage Fluctuation,Open,3
+2025-01-29,Kothrud,PMC11368,Energy,Voltage Fluctuation,Resolved,2
+2025-01-22,Kothrud,PMC49700,Waste,Dead Animal,Open,2
+2025-01-21,Kothrud,PMC44987,Waste,Dead Animal,Resolved,3
+2025-01-24,Koregaon Park,PMC12516,Traffic,Potholes,Resolved,1
+2025-01-25,Swargate,PMC82731,Water,No Water Supply,Resolved,3
+2025-01-13,Hinjewadi,PMC62816,Traffic,Illegal Parking,Resolved,2
+2025-01-23,Viman Nagar,PMC31691,Energy,Voltage Fluctuation,Resolved,2
+2025-01-09,Viman Nagar,PMC38885,Energy,Meter Fault,Open,2
+2025-01-11,Viman Nagar,PMC44509,Waste,Dead Animal,Resolved,3
+2025-01-07,Koregaon Park,PMC41028,Waste,Bin Overflowing,Open,2
+2025-01-22,Koregaon Park,PMC57305,Waste,Bin Overflowing,Open,4
+2025-01-28,Swargate,PMC82066,Energy,Meter Fault,In Progress,4
+2025-01-20,Kothrud,PMC64857,Traffic,Illegal Parking,Open,3
+2025-01-20,Viman Nagar,PMC45578,Energy,Frequent Power Cut,Open,2
+2025-01-30,Hadapsar,PMC57216,Waste,Garbage Dumped on Road,Open,4
+2025-01-16,Swargate,PMC48959,Traffic,Illegal Parking,Resolved,2
+2025-01-04,Swargate,PMC75369,Waste,Bin Overflowing,Open,4
+2025-01-24,Hadapsar,PMC48883,Energy,Voltage Fluctuation,Open,3
+2025-01-06,Viman Nagar,PMC56388,Traffic,Illegal Parking,Resolved,2
+2025-01-23,Hadapsar,PMC70118,Traffic,Illegal Parking,Resolved,3
+2025-01-22,Kothrud,PMC84274,Traffic,Illegal Parking,Open,2
+2025-01-28,Swargate,PMC85834,Water,No Water Supply,Resolved,4
+2025-01-06,Swargate,PMC28139,Water,No Water Supply,Open,3
+2025-01-22,Hadapsar,PMC81369,Energy,Meter Fault,Resolved,4
+2025-01-07,Viman Nagar,PMC29599,Water,No Water Supply,Resolved,3
+2025-01-25,Swargate,PMC46023,Energy,Frequent Power Cut,In Progress,4
+2025-01-23,Koregaon Park,PMC55720,Water,No Water Supply,Resolved,4
+2025-01-13,Koregaon Park,PMC44467,Energy,Frequent Power Cut,Resolved,3
+2025-01-18,Swargate,PMC64523,Water,No Water Supply,Open,4
+2025-01-25,Hinjewadi,PMC54239,Waste,Dead Animal,Resolved,2
+2025-01-09,Viman Nagar,PMC37349,Waste,Dead Animal,Open,3
+2025-01-20,Koregaon Park,PMC51436,Traffic,Traffic Signal Not Working,In Progress,2
+2025-01-01,Hadapsar,PMC43854,Traffic,Traffic Signal Not Working,Open,2
+2025-01-04,Hadapsar,PMC10693,Water,Contaminated Water,In Progress,3
+2025-01-01,Koregaon Park,PMC33729,Water,No Water Supply,Resolved,4
+2025-01-05,Hadapsar,PMC82474,Energy,Frequent Power Cut,Resolved,1
+2025-01-12,Koregaon Park,PMC65305,Water,No Water Supply,Resolved,1
+2025-01-30,Hadapsar,PMC72259,Traffic,Potholes,Resolved,2
+2025-01-06,Kothrud,PMC59262,Traffic,Traffic Signal Not Working,Open,2
+2025-01-04,Hinjewadi,PMC39617,Water,Contaminated Water,Resolved,1
+2025-01-30,Viman Nagar,PMC33539,Waste,Bin Overflowing,Resolved,1
+2025-01-22,Hinjewadi,PMC38200,Traffic,Traffic Signal Not Working,Open,4
+2025-01-13,Hinjewadi,PMC19239,Energy,Voltage Fluctuation,Resolved,4
+2025-01-30,Kothrud,PMC26060,Traffic,Traffic Signal Not Working,Open,4
+2025-01-16,Swargate,PMC42726,Energy,Meter Fault,Resolved,2
+2025-01-16,Kothrud,PMC64724,Traffic,Potholes,Resolved,1
+2025-01-09,Hinjewadi,PMC47527,Energy,Frequent Power Cut,Open,1
+2025-01-18,Koregaon Park,PMC10511,Energy,Frequent Power Cut,Open,3
+2025-01-25,Viman Nagar,PMC72354,Traffic,Potholes,Resolved,4
+2025-01-14,Swargate,PMC27360,Water,No Water Supply,Resolved,2
+2025-01-05,Swargate,PMC61840,Water,No Water Supply,Open,4
+2025-01-28,Kothrud,PMC50441,Water,No Water Supply,Open,3
+2025-01-26,Kothrud,PMC99457,Water,Contaminated Water,Resolved,1
+2025-01-08,Swargate,PMC97911,Energy,Frequent Power Cut,Open,3
+2025-01-03,Kothrud,PMC80884,Water,No Water Supply,Resolved,1
+2025-01-01,Swargate,PMC22284,Energy,Meter Fault,Open,4
+2025-01-30,Koregaon Park,PMC72123,Energy,Frequent Power Cut,Resolved,2
+2025-01-17,Kothrud,PMC66748,Waste,Bin Overflowing,Resolved,3
+2025-01-17,Kothrud,PMC39902,Water,No Water Supply,Resolved,2
+2025-01-14,Kothrud,PMC92258,Traffic,Illegal Parking,Open,4
+2025-01-08,Hinjewadi,PMC74663,Energy,Meter Fault,Open,4
+2025-01-25,Swargate,PMC36041,Waste,Dead Animal,Open,1
+2025-01-04,Kothrud,PMC94924,Water,Contaminated Water,Resolved,2
+2025-01-21,Swargate,PMC35276,Traffic,Potholes,Open,4
+2025-01-01,Hadapsar,PMC94399,Water,Contaminated Water,In Progress,1
+2025-01-01,Hinjewadi,PMC44960,Traffic,Traffic Signal Not Working,Resolved,1
+2025-01-14,Viman Nagar,PMC61010,Energy,Frequent Power Cut,Open,1
+2025-01-23,Hinjewadi,PMC61993,Traffic,Traffic Signal Not Working,Resolved,2
+2025-01-14,Koregaon Park,PMC28487,Waste,Dead Animal,Resolved,4
+2025-01-25,Swargate,PMC76914,Water,No Water Supply,Resolved,3
+2025-01-10,Koregaon Park,PMC50155,Water,Contaminated Water,Resolved,4
+2025-01-02,Kothrud,PMC21609,Waste,Dead Animal,Open,1
+2025-01-01,Hadapsar,PMC49294,Water,Contaminated Water,In Progress,3
+2025-01-24,Hadapsar,PMC61594,Waste,Bin Overflowing,Resolved,1
+2025-01-08,Hinjewadi,PMC21827,Traffic,Illegal Parking,Resolved,3
+2025-01-20,Hadapsar,PMC21497,Waste,Bin Overflowing,Resolved,4
+2025-01-15,Viman Nagar,PMC67230,Water,No Water Supply,Resolved,2
+2025-01-03,Swargate,PMC38867,Traffic,Potholes,Resolved,2
+2025-01-18,Hinjewadi,PMC72556,Water,Contaminated Water,In Progress,3
+2025-01-23,Hadapsar,PMC54830,Waste,Garbage Dumped on Road,Resolved,1
+2025-01-12,Hadapsar,PMC49002,Traffic,Traffic Signal Not Working,In Progress,2
+2025-01-26,Viman Nagar,PMC16341,Water,No Water Supply,Resolved,4
+2025-01-02,Viman Nagar,PMC31609,Waste,Garbage Dumped on Road,Resolved,4
+2025-01-16,Koregaon Park,PMC52481,Energy,Meter Fault,Open,3
+2025-01-11,Viman Nagar,PMC76777,Traffic,Traffic Signal Not Working,Resolved,2
+2025-01-30,Koregaon Park,PMC50045,Traffic,Illegal Parking,Resolved,4
+2025-01-18,Hinjewadi,PMC63732,Traffic,Traffic Signal Not Working,Resolved,2
+2025-01-08,Hadapsar,PMC65559,Water,No Water Supply,Resolved,3
+2025-01-24,Hinjewadi,PMC64825,Traffic,Traffic Signal Not Working,In Progress,1
+2025-01-12,Kothrud,PMC15241,Water,Contaminated Water,Open,2
+2025-01-19,Kothrud,PMC56078,Traffic,Illegal Parking,Open,1
+2025-01-20,Viman Nagar,PMC48317,Energy,Frequent Power Cut,Open,2
+2025-01-10,Hadapsar,PMC29068,Traffic,Illegal Parking,Resolved,4
+2025-01-23,Koregaon Park,PMC36055,Water,No Water Supply,Open,1
+2025-01-29,Hinjewadi,PMC84451,Water,Contaminated Water,Resolved,3
+2025-01-29,Hinjewadi,PMC62312,Traffic,Traffic Signal Not Working,Resolved,1
+2025-01-03,Hadapsar,PMC47374,Energy,Frequent Power Cut,Resolved,1
+2025-01-13,Swargate,PMC91460,Energy,Meter Fault,Resolved,4
+2025-01-21,Hadapsar,PMC44373,Water,No Water Supply,Resolved,4
+2025-01-21,Kothrud,PMC55566,Waste,Garbage Dumped on Road,Open,3
+2025-01-12,Swargate,PMC66657,Waste,Dead Animal,Resolved,3
+2025-01-21,Hinjewadi,PMC12226,Traffic,Potholes,Open,2
+2025-01-24,Kothrud,PMC40571,Water,No Water Supply,In Progress,2
+2025-01-25,Hadapsar,PMC73209,Water,Contaminated Water,Open,2
+2025-01-17,Hadapsar,PMC21298,Energy,Meter Fault,Resolved,3
+2025-01-14,Hadapsar,PMC34674,Water,No Water Supply,Open,3
+2025-01-09,Hinjewadi,PMC78134,Traffic,Traffic Signal Not Working,Resolved,1
+2025-01-17,Hadapsar,PMC36288,Water,No Water Supply,In Progress,2
+2025-01-09,Swargate,PMC89676,Energy,Meter Fault,In Progress,1
+2025-01-13,Hadapsar,PMC32458,Water,Contaminated Water,Resolved,2
+2025-01-08,Hadapsar,PMC98942,Water,Contaminated Water,Resolved,2
+2025-01-10,Kothrud,PMC24687,Water,No Water Supply,Resolved,2
+2025-01-12,Kothrud,PMC94999,Waste,Bin Overflowing,Open,2
+2025-01-24,Viman Nagar,PMC44065,Traffic,Traffic Signal Not Working,Open,3
+2025-01-12,Hadapsar,PMC99056,Traffic,Illegal Parking,Resolved,1
+2025-01-23,Viman Nagar,PMC11938,Water,Contaminated Water,Open,3
+2025-01-25,Koregaon Park,PMC55386,Water,Contaminated Water,Open,2
+2025-01-13,Viman Nagar,PMC91783,Traffic,Illegal Parking,In Progress,1
+2025-01-07,Hadapsar,PMC23821,Energy,Meter Fault,In Progress,4
+2025-01-25,Hadapsar,PMC24964,Waste,Garbage Dumped on Road,Resolved,2
+2025-01-21,Viman Nagar,PMC76431,Water,Contaminated Water,Open,3
+2025-01-25,Viman Nagar,PMC93308,Waste,Garbage Dumped on Road,Resolved,2
+2025-01-27,Swargate,PMC28109,Water,Contaminated Water,Resolved,1
+2025-01-15,Kothrud,PMC26674,Waste,Bin Overflowing,Open,1
+2025-01-10,Viman Nagar,PMC76912,Traffic,Illegal Parking,Resolved,2
+2025-01-27,Hinjewadi,PMC76671,Traffic,Potholes,In Progress,2
+2025-01-27,Swargate,PMC25967,Waste,Garbage Dumped on Road,Open,4
+2025-01-09,Hinjewadi,PMC65569,Water,No Water Supply,Open,3
+2025-01-11,Swargate,PMC93219,Traffic,Potholes,Resolved,1
+2025-01-21,Hadapsar,PMC70340,Traffic,Illegal Parking,In Progress,2
+2025-01-02,Kothrud,PMC47756,Energy,Frequent Power Cut,Resolved,3
+2025-01-13,Swargate,PMC24029,Waste,Garbage Dumped on Road,Resolved,1
+2025-01-13,Kothrud,PMC18812,Traffic,Potholes,Resolved,3
+2025-01-18,Koregaon Park,PMC26046,Waste,Bin Overflowing,Open,1
+2025-01-29,Kothrud,PMC52929,Water,No Water Supply,Resolved,3
+2025-01-23,Viman Nagar,PMC94716,Traffic,Illegal Parking,In Progress,1
+2025-01-17,Koregaon Park,PMC66615,Waste,Bin Overflowing,In Progress,3
+2025-01-05,Kothrud,PMC81854,Water,No Water Supply,Resolved,4
+2025-01-07,Hinjewadi,PMC56878,Traffic,Potholes,Resolved,4
+2025-01-13,Koregaon Park,PMC52874,Water,No Water Supply,Resolved,4
+2025-01-19,Swargate,PMC58622,Waste,Bin Overflowing,Resolved,2
+2025-01-02,Hinjewadi,PMC16777,Traffic,Traffic Signal Not Working,Open,1
+2025-01-25,Viman Nagar,PMC82908,Water,No Water Supply,Open,3
+2025-01-25,Hadapsar,PMC20441,Water,Contaminated Water,Resolved,1
+2025-01-11,Viman Nagar,PMC75373,Traffic,Potholes,Resolved,2
+2025-01-10,Kothrud,PMC15896,Energy,Meter Fault,Resolved,1
+2025-01-12,Kothrud,PMC37166,Traffic,Illegal Parking,Resolved,3
+2025-01-04,Viman Nagar,PMC15679,Traffic,Traffic Signal Not Working,Open,3
+2025-01-21,Hadapsar,PMC49819,Traffic,Potholes,Resolved,4
+2025-01-11,Viman Nagar,PMC11012,Waste,Dead Animal,In Progress,4
+2025-01-25,Koregaon Park,PMC46967,Energy,Meter Fault,Open,3
+2025-01-16,Kothrud,PMC29093,Energy,Frequent Power Cut,Resolved,1
+2025-01-21,Swargate,PMC22217,Water,Contaminated Water,Resolved,1
+2025-01-05,Swargate,PMC26756,Water,No Water Supply,Resolved,2
+2025-01-15,Hinjewadi,PMC82123,Traffic,Traffic Signal Not Working,Open,4
+2025-01-17,Swargate,PMC92803,Waste,Garbage Dumped on Road,Resolved,4
+2025-01-11,Swargate,PMC95376,Water,Contaminated Water,Resolved,1
+2025-01-18,Viman Nagar,PMC40289,Waste,Garbage Dumped on Road,Open,2
+2025-01-30,Viman Nagar,PMC17542,Water,Contaminated Water,Open,2
+2025-01-20,Viman Nagar,PMC99341,Water,No Water Supply,Resolved,4
+2025-01-02,Hadapsar,PMC61181,Water,Contaminated Water,Open,2
+2025-01-11,Kothrud,PMC27413,Traffic,Traffic Signal Not Working,Resolved,4
+2025-01-07,Kothrud,PMC28435,Waste,Bin Overflowing,Resolved,1
+2025-01-20,Kothrud,PMC62917,Waste,Dead Animal,Resolved,4
+2025-01-17,Koregaon Park,PMC43712,Energy,Frequent Power Cut,Resolved,3
+2025-01-29,Viman Nagar,PMC51527,Water,No Water Supply,Open,4
+2025-01-13,Koregaon Park,PMC80261,Traffic,Potholes,Resolved,2
+2025-01-12,Kothrud,PMC67318,Traffic,Illegal Parking,Open,3
+2025-01-20,Koregaon Park,PMC55785,Water,No Water Supply,In Progress,3
+2025-01-02,Swargate,PMC64274,Energy,Voltage Fluctuation,In Progress,3
+2025-01-14,Kothrud,PMC17214,Traffic,Traffic Signal Not Working,Resolved,2
+2025-01-23,Hadapsar,PMC96447,Waste,Bin Overflowing,Resolved,1
+2025-01-19,Viman Nagar,PMC36994,Waste,Bin Overflowing,Open,1
+2025-01-10,Kothrud,PMC50419,Traffic,Traffic Signal Not Working,Resolved,1
+2025-01-02,Koregaon Park,PMC72290,Energy,Meter Fault,Resolved,3
+2025-01-17,Viman Nagar,PMC63954,Traffic,Traffic Signal Not Working,Open,2
+2025-01-29,Kothrud,PMC93574,Traffic,Traffic Signal Not Working,In Progress,2
+2025-01-30,Viman Nagar,PMC76643,Traffic,Potholes,Resolved,1
+2025-01-07,Koregaon Park,PMC47874,Traffic,Traffic Signal Not Working,Resolved,3
+2025-01-04,Koregaon Park,PMC93700,Traffic,Potholes,Resolved,3
+2025-01-13,Viman Nagar,PMC68043,Traffic,Potholes,Resolved,3
+2025-01-23,Hadapsar,PMC50316,Energy,Frequent Power Cut,Open,2
+2025-01-06,Hinjewadi,PMC71613,Traffic,Illegal Parking,Resolved,1
+2025-01-11,Swargate,PMC64438,Traffic,Potholes,Resolved,2
+2025-01-19,Hadapsar,PMC71576,Waste,Dead Animal,Open,3
+2025-01-20,Swargate,PMC12787,Energy,Meter Fault,Open,3
+2025-01-29,Swargate,PMC58885,Waste,Bin Overflowing,Resolved,4
+2025-01-04,Swargate,PMC98441,Energy,Meter Fault,Resolved,3
+2025-01-10,Kothrud,PMC73235,Waste,Bin Overflowing,Resolved,1
+2025-01-16,Koregaon Park,PMC84095,Traffic,Traffic Signal Not Working,Resolved,3
+2025-01-03,Hadapsar,PMC43821,Traffic,Traffic Signal Not Working,Resolved,3
+2025-01-06,Viman Nagar,PMC40276,Water,Contaminated Water,Resolved,2
+2025-01-26,Koregaon Park,PMC39126,Waste,Bin Overflowing,Open,1
+2025-01-03,Hadapsar,PMC54810,Energy,Voltage Fluctuation,Resolved,3
+2025-01-15,Hinjewadi,PMC85314,Traffic,Illegal Parking,Open,2
+2025-01-15,Swargate,PMC99346,Traffic,Illegal Parking,In Progress,2
+2025-01-29,Swargate,PMC42340,Energy,Meter Fault,Open,1
+2025-01-13,Hadapsar,PMC87562,Traffic,Potholes,Resolved,3
+2025-01-27,Hinjewadi,PMC53581,Traffic,Traffic Signal Not Working,Resolved,3
+2025-01-28,Koregaon Park,PMC93320,Waste,Garbage Dumped on Road,Resolved,1
+2025-01-03,Swargate,PMC79221,Traffic,Illegal Parking,Resolved,4
+2025-01-05,Viman Nagar,PMC59925,Water,Contaminated Water,Open,4
+2025-01-03,Kothrud,PMC92798,Waste,Garbage Dumped on Road,Resolved,1
+2025-01-23,Swargate,PMC40925,Water,No Water Supply,Open,4
+2025-01-17,Viman Nagar,PMC40362,Water,Contaminated Water,Resolved,2
+2025-01-06,Hadapsar,PMC98196,Water,Contaminated Water,In Progress,3
+2025-01-26,Koregaon Park,PMC94980,Water,No Water Supply,In Progress,4
+2025-01-24,Swargate,PMC58062,Waste,Dead Animal,In Progress,2
+2025-01-15,Hadapsar,PMC17668,Energy,Frequent Power Cut,Resolved,4
+2025-01-05,Swargate,PMC24588,Energy,Voltage Fluctuation,Resolved,1
+2025-01-25,Koregaon Park,PMC46539,Water,No Water Supply,Resolved,3
+2025-01-17,Hadapsar,PMC17045,Water,No Water Supply,Resolved,1
+2025-01-28,Hadapsar,PMC67620,Waste,Garbage Dumped on Road,Open,2
+2025-01-30,Hadapsar,PMC82368,Water,No Water Supply,In Progress,2
+2025-01-28,Koregaon Park,PMC95418,Water,No Water Supply,Open,4
+2025-01-05,Kothrud,PMC96262,Water,No Water Supply,Open,2
+2025-01-07,Koregaon Park,PMC37623,Water,No Water Supply,Resolved,3
+2025-01-01,Swargate,PMC87158,Traffic,Potholes,Open,3
+2025-01-02,Koregaon Park,PMC21058,Waste,Garbage Dumped on Road,Resolved,1
+2025-01-04,Hinjewadi,PMC44094,Traffic,Illegal Parking,Resolved,3
+2025-01-28,Viman Nagar,PMC28138,Energy,Voltage Fluctuation,Resolved,4
+2025-01-11,Hinjewadi,PMC40789,Traffic,Potholes,Resolved,1
+2025-01-14,Kothrud,PMC62512,Traffic,Potholes,Open,1
+2025-01-07,Viman Nagar,PMC77361,Energy,Meter Fault,Resolved,4
+2025-01-02,Kothrud,PMC52991,Waste,Bin Overflowing,Resolved,1
+2025-01-04,Hadapsar,PMC29570,Energy,Voltage Fluctuation,Resolved,1
+2025-01-29,Hadapsar,PMC90000,Traffic,Illegal Parking,Open,3
+2025-01-12,Koregaon Park,PMC95786,Energy,Frequent Power Cut,Resolved,4
+2025-01-08,Hadapsar,PMC29314,Traffic,Traffic Signal Not Working,In Progress,1
+2025-01-29,Koregaon Park,PMC55760,Water,No Water Supply,Open,1
+2025-01-22,Hadapsar,PMC62397,Waste,Bin Overflowing,Resolved,4
+2025-01-29,Viman Nagar,PMC49021,Traffic,Illegal Parking,Open,2
+2025-01-30,Viman Nagar,PMC29047,Waste,Bin Overflowing,Open,1
+2025-01-13,Hinjewadi,PMC90590,Traffic,Potholes,Resolved,2
+2025-01-23,Koregaon Park,PMC57756,Traffic,Potholes,Resolved,3
+2025-01-01,Hadapsar,PMC25715,Traffic,Traffic Signal Not Working,Resolved,1
+2025-01-26,Swargate,PMC84704,Traffic,Potholes,Resolved,2
+2025-01-21,Koregaon Park,PMC37095,Traffic,Potholes,Open,2
+2025-01-26,Swargate,PMC39908,Traffic,Illegal Parking,Resolved,4
+2025-01-02,Swargate,PMC54036,Water,Contaminated Water,Resolved,2
+2025-01-03,Viman Nagar,PMC87349,Traffic,Illegal Parking,In Progress,4
+2025-01-05,Swargate,PMC48276,Energy,Voltage Fluctuation,Resolved,4
+2025-01-02,Swargate,PMC48408,Energy,Voltage Fluctuation,Resolved,3
+2025-01-24,Hadapsar,PMC97906,Water,No Water Supply,Open,2
+2025-01-09,Kothrud,PMC77649,Water,No Water Supply,Open,4
+2025-01-05,Koregaon Park,PMC77806,Energy,Voltage Fluctuation,Open,2
+2025-01-24,Swargate,PMC63973,Water,Contaminated Water,Open,4
+2025-01-25,Kothrud,PMC89471,Traffic,Traffic Signal Not Working,Open,2
+2025-01-13,Swargate,PMC43188,Water,Contaminated Water,In Progress,4
+2025-01-19,Koregaon Park,PMC11010,Water,No Water Supply,Resolved,4
+2025-01-22,Kothrud,PMC41673,Water,Contaminated Water,Resolved,2
+2025-01-03,Koregaon Park,PMC48229,Waste,Garbage Dumped on Road,Resolved,2
+2025-01-25,Hadapsar,PMC48947,Waste,Dead Animal,Open,4
+2025-01-09,Swargate,PMC41033,Energy,Meter Fault,Resolved,3
+2025-01-05,Viman Nagar,PMC31659,Traffic,Potholes,Open,1
+2025-01-12,Koregaon Park,PMC59742,Waste,Dead Animal,Resolved,4
+2025-01-08,Swargate,PMC89386,Water,Contaminated Water,In Progress,2
+2025-01-02,Swargate,PMC98733,Energy,Frequent Power Cut,Resolved,2
+2025-01-12,Koregaon Park,PMC80865,Waste,Garbage Dumped on Road,Resolved,3
+2025-01-23,Kothrud,PMC81470,Energy,Voltage Fluctuation,In Progress,4
+2025-01-27,Koregaon Park,PMC46651,Traffic,Illegal Parking,Resolved,4
+2025-01-26,Hadapsar,PMC28217,Water,No Water Supply,Resolved,2
+2025-01-05,Viman Nagar,PMC38581,Waste,Dead Animal,Resolved,3
+2025-01-30,Kothrud,PMC85060,Water,No Water Supply,Resolved,3
+2025-01-08,Swargate,PMC23003,Water,No Water Supply,Resolved,3
+2025-01-13,Swargate,PMC38219,Water,Contaminated Water,Resolved,3
+2025-01-03,Kothrud,PMC60234,Energy,Voltage Fluctuation,Open,2
+2025-01-16,Hadapsar,PMC42770,Waste,Garbage Dumped on Road,Resolved,2
+2025-01-17,Hinjewadi,PMC56945,Energy,Meter Fault,Resolved,2
+2025-01-23,Swargate,PMC15415,Waste,Garbage Dumped on Road,Resolved,1
+2025-01-30,Hadapsar,PMC19154,Waste,Bin Overflowing,Resolved,1
+2025-01-06,Swargate,PMC84062,Waste,Garbage Dumped on Road,Resolved,3
+2025-01-17,Kothrud,PMC54299,Traffic,Potholes,Open,2
+2025-01-24,Swargate,PMC65297,Energy,Voltage Fluctuation,Resolved,4
+2025-01-06,Koregaon Park,PMC51470,Traffic,Potholes,Resolved,1
+2025-01-16,Swargate,PMC42652,Waste,Dead Animal,Resolved,3
+2025-01-20,Hinjewadi,PMC32354,Traffic,Illegal Parking,Open,4
+2025-01-17,Kothrud,PMC45230,Energy,Voltage Fluctuation,Resolved,3
+2025-01-12,Koregaon Park,PMC45063,Energy,Frequent Power Cut,Open,3
+2025-01-13,Hadapsar,PMC46934,Water,Contaminated Water,Open,2
+2025-01-08,Koregaon Park,PMC73096,Energy,Meter Fault,Open,4
+2025-01-05,Koregaon Park,PMC28277,Traffic,Traffic Signal Not Working,Resolved,1
+2025-01-23,Swargate,PMC86929,Waste,Garbage Dumped on Road,Open,2
+2025-01-25,Hinjewadi,PMC35981,Energy,Voltage Fluctuation,Resolved,1
+2025-01-21,Koregaon Park,PMC52261,Water,No Water Supply,Resolved,3
+2025-01-04,Hinjewadi,PMC51119,Energy,Meter Fault,Resolved,3
+2025-01-09,Kothrud,PMC22388,Water,No Water Supply,Resolved,3
+2025-01-15,Swargate,PMC65653,Traffic,Illegal Parking,In Progress,2
+2025-01-10,Hinjewadi,PMC68532,Traffic,Traffic Signal Not Working,Open,4
+2025-01-05,Viman Nagar,PMC86414,Waste,Bin Overflowing,Resolved,2
+2025-01-20,Kothrud,PMC11603,Traffic,Potholes,Resolved,3
+2025-01-25,Swargate,PMC25089,Water,Contaminated Water,Open,2
+2025-01-01,Swargate,PMC79850,Traffic,Illegal Parking,Resolved,1
+2025-01-07,Hadapsar,PMC48830,Energy,Frequent Power Cut,Resolved,1
+2025-01-27,Koregaon Park,PMC17181,Waste,Garbage Dumped on Road,Resolved,1
+2025-01-12,Hinjewadi,PMC34053,Traffic,Illegal Parking,Open,3
+2025-01-21,Hadapsar,PMC63356,Traffic,Traffic Signal Not Working,In Progress,1
+2025-01-22,Hadapsar,PMC93104,Waste,Bin Overflowing,Resolved,2
+2025-01-15,Hadapsar,PMC48269,Traffic,Illegal Parking,In Progress,2
+2025-01-06,Koregaon Park,PMC76872,Waste,Bin Overflowing,Resolved,3
+2025-01-16,Hinjewadi,PMC63150,Traffic,Traffic Signal Not Working,Resolved,3
+2025-01-14,Koregaon Park,PMC44539,Water,No Water Supply,Resolved,2
+2025-01-20,Swargate,PMC54450,Traffic,Potholes,In Progress,1
+2025-01-14,Hadapsar,PMC36117,Water,Contaminated Water,Resolved,3
+2025-01-29,Viman Nagar,PMC38395,Water,No Water Supply,Resolved,2
+2025-01-24,Viman Nagar,PMC24300,Energy,Frequent Power Cut,Resolved,2
+2025-01-28,Hinjewadi,PMC25298,Traffic,Potholes,Resolved,4
+2025-01-27,Kothrud,PMC77435,Water,No Water Supply,Resolved,4
+2025-01-29,Kothrud,PMC98341,Traffic,Traffic Signal Not Working,Resolved,2
+2025-01-05,Hinjewadi,PMC61890,Water,No Water Supply,Resolved,4
+2025-01-09,Swargate,PMC84656,Water,Contaminated Water,Open,3
+2025-01-17,Hadapsar,PMC42962,Traffic,Traffic Signal Not Working,Resolved,3
+2025-01-23,Hinjewadi,PMC72781,Traffic,Traffic Signal Not Working,In Progress,1
+2025-01-05,Viman Nagar,PMC81417,Traffic,Illegal Parking,Open,3
+2025-01-28,Hinjewadi,PMC33249,Traffic,Illegal Parking,In Progress,4
+2025-01-17,Swargate,PMC38321,Water,No Water Supply,In Progress,1
+2025-01-29,Koregaon Park,PMC39113,Traffic,Potholes,In Progress,4
+2025-01-12,Viman Nagar,PMC79510,Water,Contaminated Water,Resolved,4
+2025-01-03,Viman Nagar,PMC85060,Water,Contaminated Water,Open,2
+2025-01-10,Kothrud,PMC87430,Traffic,Potholes,Open,3
+2025-01-18,Kothrud,PMC90394,Energy,Voltage Fluctuation,Open,4
+2025-01-23,Kothrud,PMC91472,Waste,Dead Animal,Open,2
+2025-01-21,Kothrud,PMC38828,Water,Contaminated Water,Resolved,2
+2025-01-24,Hadapsar,PMC99040,Traffic,Illegal Parking,Resolved,2
+2025-01-14,Koregaon Park,PMC42073,Traffic,Traffic Signal Not Working,Resolved,4
+2025-01-28,Kothrud,PMC34063,Traffic,Potholes,Resolved,4
+2025-01-27,Koregaon Park,PMC26527,Waste,Garbage Dumped on Road,Resolved,4
+2025-01-18,Swargate,PMC46258,Energy,Voltage Fluctuation,Open,4
+2025-01-01,Hinjewadi,PMC60301,Traffic,Traffic Signal Not Working,Resolved,1
+2025-01-09,Swargate,PMC92814,Traffic,Potholes,Open,4
+2025-01-29,Koregaon Park,PMC31967,Traffic,Traffic Signal Not Working,Resolved,2
+2025-01-20,Kothrud,PMC92676,Traffic,Potholes,In Progress,4
+2025-01-02,Hadapsar,PMC33380,Waste,Garbage Dumped on Road,Resolved,4
+2025-01-06,Hinjewadi,PMC64714,Traffic,Illegal Parking,Open,1
+2025-01-08,Koregaon Park,PMC31948,Water,Contaminated Water,Resolved,2
+2025-01-30,Viman Nagar,PMC60537,Waste,Garbage Dumped on Road,Open,4
+2025-01-05,Koregaon Park,PMC35931,Water,No Water Supply,Resolved,4
+2025-01-02,Kothrud,PMC78685,Water,No Water Supply,Open,2
+2025-01-16,Koregaon Park,PMC54327,Traffic,Illegal Parking,Open,2
+2025-01-01,Koregaon Park,PMC89257,Waste,Bin Overflowing,Resolved,1
+2025-01-26,Kothrud,PMC79767,Water,Contaminated Water,In Progress,2
+2025-01-17,Viman Nagar,PMC87574,Water,No Water Supply,Open,1
+2025-01-23,Viman Nagar,PMC84267,Energy,Meter Fault,Resolved,4
+2025-01-14,Swargate,PMC23647,Energy,Meter Fault,Open,4
+2025-01-12,Kothrud,PMC69452,Energy,Frequent Power Cut,Open,2
+2025-01-08,Kothrud,PMC84039,Energy,Frequent Power Cut,Resolved,1
+2025-01-27,Swargate,PMC76465,Energy,Meter Fault,In Progress,4
+2025-01-24,Viman Nagar,PMC34961,Traffic,Traffic Signal Not Working,Open,1
+2025-01-06,Viman Nagar,PMC73002,Energy,Frequent Power Cut,Open,2
+2025-01-08,Koregaon Park,PMC28758,Energy,Frequent Power Cut,Resolved,2
+2025-01-25,Viman Nagar,PMC39516,Energy,Voltage Fluctuation,Open,4
+2025-01-06,Hadapsar,PMC32405,Waste,Bin Overflowing,Open,2
+2025-01-30,Koregaon Park,PMC57483,Traffic,Traffic Signal Not Working,Resolved,1
+2025-01-08,Swargate,PMC99127,Traffic,Traffic Signal Not Working,Open,3
+2025-01-30,Koregaon Park,PMC85078,Water,No Water Supply,Resolved,3
+2025-01-01,Swargate,PMC85932,Waste,Bin Overflowing,Resolved,2
+2025-01-03,Koregaon Park,PMC57101,Energy,Voltage Fluctuation,Open,2
+2025-01-27,Swargate,PMC42188,Traffic,Traffic Signal Not Working,Open,4
+2025-01-29,Swargate,PMC66549,Energy,Voltage Fluctuation,Open,1
+2025-01-11,Swargate,PMC62579,Energy,Frequent Power Cut,Resolved,1
+2025-01-23,Hadapsar,PMC23051,Waste,Bin Overflowing,Resolved,2
+2025-01-19,Koregaon Park,PMC37005,Water,Contaminated Water,Open,2
+2025-01-25,Swargate,PMC51287,Traffic,Traffic Signal Not Working,Open,2
+2025-01-11,Viman Nagar,PMC12549,Water,Contaminated Water,Resolved,1
+2025-01-08,Viman Nagar,PMC31134,Energy,Frequent Power Cut,Open,2
+2025-01-14,Hadapsar,PMC49743,Energy,Frequent Power Cut,Resolved,2
+2025-01-08,Koregaon Park,PMC23532,Traffic,Traffic Signal Not Working,Open,4
+2025-01-17,Kothrud,PMC95717,Energy,Voltage Fluctuation,Open,4
+2025-01-18,Hadapsar,PMC74085,Water,No Water Supply,Resolved,2
+2025-01-06,Koregaon Park,PMC18473,Water,No Water Supply,Resolved,2
+2025-01-24,Kothrud,PMC17255,Waste,Dead Animal,Resolved,3
+2025-01-01,Hadapsar,PMC55004,Waste,Bin Overflowing,Open,3
+2025-01-27,Kothrud,PMC32064,Traffic,Traffic Signal Not Working,Resolved,4
+2025-01-21,Viman Nagar,PMC74597,Water,Contaminated Water,In Progress,1
+2025-01-05,Hinjewadi,PMC48852,Traffic,Traffic Signal Not Working,Open,3
+2025-01-08,Hadapsar,PMC90297,Traffic,Traffic Signal Not Working,Open,3
+2025-01-14,Kothrud,PMC69772,Energy,Meter Fault,Resolved,1
+2025-01-24,Kothrud,PMC91603,Water,No Water Supply,Open,2
+2025-01-08,Hinjewadi,PMC36371,Waste,Dead Animal,In Progress,4
+2025-01-20,Kothrud,PMC96200,Waste,Bin Overflowing,Resolved,3
+2025-01-18,Koregaon Park,PMC85918,Traffic,Traffic Signal Not Working,Resolved,4
+2025-01-15,Swargate,PMC71663,Energy,Voltage Fluctuation,Open,4
+2025-01-19,Kothrud,PMC83809,Traffic,Potholes,Open,1
+2025-01-16,Koregaon Park,PMC58210,Traffic,Potholes,Resolved,4
+2025-01-01,Hadapsar,PMC64241,Waste,Garbage Dumped on Road,Resolved,3
+2025-01-26,Koregaon Park,PMC30100,Waste,Bin Overflowing,Open,3
+2025-01-27,Hinjewadi,PMC85897,Traffic,Potholes,Resolved,3
+2025-01-12,Viman Nagar,PMC70602,Waste,Dead Animal,Resolved,2
+2025-01-21,Kothrud,PMC93997,Waste,Bin Overflowing,Resolved,1
+2025-01-22,Viman Nagar,PMC94410,Traffic,Illegal Parking,Resolved,1
+2025-01-08,Koregaon Park,PMC60426,Energy,Frequent Power Cut,Resolved,4
+2025-01-11,Koregaon Park,PMC57619,Waste,Bin Overflowing,Open,2
+2025-01-27,Hadapsar,PMC12521,Traffic,Illegal Parking,In Progress,4
+2025-01-14,Koregaon Park,PMC68998,Energy,Frequent Power Cut,Resolved,2
+2025-01-18,Koregaon Park,PMC77372,Traffic,Potholes,Open,2
+2025-01-12,Koregaon Park,PMC17886,Waste,Bin Overflowing,Resolved,1
+2025-01-05,Hadapsar,PMC33764,Waste,Bin Overflowing,Resolved,1
+2025-01-24,Hinjewadi,PMC83802,Energy,Voltage Fluctuation,Open,3
+2025-01-04,Swargate,PMC59873,Energy,Meter Fault,Open,2
+2025-01-25,Koregaon Park,PMC93980,Waste,Bin Overflowing,In Progress,3
+2025-01-10,Viman Nagar,PMC35167,Waste,Garbage Dumped on Road,Resolved,2
+2025-01-24,Kothrud,PMC81577,Energy,Meter Fault,Open,1
+2025-01-23,Hinjewadi,PMC63481,Water,No Water Supply,Resolved,1
+2025-01-17,Koregaon Park,PMC66904,Traffic,Illegal Parking,Resolved,4
+2025-01-23,Viman Nagar,PMC52026,Traffic,Potholes,Resolved,4
+2025-01-27,Swargate,PMC93916,Water,No Water Supply,Resolved,1
+2025-01-15,Koregaon Park,PMC20749,Energy,Voltage Fluctuation,Resolved,1
+2025-01-05,Kothrud,PMC23572,Traffic,Illegal Parking,Resolved,4
+2025-01-13,Swargate,PMC50439,Water,No Water Supply,Open,2
+2025-01-15,Koregaon Park,PMC34846,Waste,Garbage Dumped on Road,Open,4
+2025-01-07,Koregaon Park,PMC31744,Traffic,Illegal Parking,Resolved,3
+2025-01-21,Kothrud,PMC23344,Waste,Bin Overflowing,Resolved,1
+2025-01-17,Viman Nagar,PMC30586,Energy,Voltage Fluctuation,Open,4
+2025-01-09,Koregaon Park,PMC17737,Water,No Water Supply,Open,1
+2025-01-16,Swargate,PMC44777,Waste,Bin Overflowing,Resolved,1
+2025-01-19,Hadapsar,PMC50665,Water,Contaminated Water,Open,1
+2025-01-02,Kothrud,PMC76755,Traffic,Illegal Parking,Resolved,3
+2025-01-23,Kothrud,PMC32363,Waste,Garbage Dumped on Road,Resolved,2
+2025-01-05,Kothrud,PMC13744,Water,Contaminated Water,Resolved,2
+2025-01-03,Viman Nagar,PMC46481,Waste,Garbage Dumped on Road,Resolved,2
+2025-01-24,Hinjewadi,PMC82545,Traffic,Illegal Parking,Resolved,4
+2025-01-19,Viman Nagar,PMC94284,Water,No Water Supply,Open,1
+2025-01-18,Viman Nagar,PMC97185,Waste,Dead Animal,Open,4
+2025-01-13,Viman Nagar,PMC89636,Traffic,Illegal Parking,Resolved,1
+2025-01-12,Koregaon Park,PMC74383,Traffic,Potholes,Resolved,4
+2025-01-16,Kothrud,PMC69125,Energy,Frequent Power Cut,Resolved,3
+2025-01-08,Swargate,PMC10672,Energy,Voltage Fluctuation,Resolved,1
+2025-01-12,Viman Nagar,PMC33495,Water,No Water Supply,Open,2
+2025-01-18,Kothrud,PMC89579,Water,Contaminated Water,In Progress,4
+2025-01-09,Hadapsar,PMC33954,Traffic,Potholes,Open,3
+2025-01-19,Koregaon Park,PMC28359,Traffic,Potholes,Resolved,1
+2025-01-01,Hinjewadi,PMC21584,Traffic,Potholes,Open,4
+2025-01-14,Viman Nagar,PMC82316,Waste,Bin Overflowing,Resolved,2
+2025-01-08,Koregaon Park,PMC22547,Waste,Garbage Dumped on Road,Open,2
+2025-01-14,Hadapsar,PMC87370,Water,No Water Supply,Resolved,2
+2025-01-29,Kothrud,PMC17276,Water,Contaminated Water,Resolved,2
+2025-01-27,Viman Nagar,PMC68181,Traffic,Potholes,Open,1
+2025-01-30,Hadapsar,PMC80619,Traffic,Potholes,Open,3
+2025-01-28,Kothrud,PMC74698,Traffic,Traffic Signal Not Working,In Progress,3
+2025-01-04,Hinjewadi,PMC21967,Traffic,Potholes,Open,3
+2025-01-08,Viman Nagar,PMC61049,Traffic,Potholes,Resolved,3
+2025-01-19,Koregaon Park,PMC67224,Waste,Bin Overflowing,Open,3
+2025-01-19,Hadapsar,PMC36583,Energy,Voltage Fluctuation,Resolved,2
+2025-01-23,Swargate,PMC58153,Water,No Water Supply,Resolved,3
+2025-01-17,Hinjewadi,PMC70344,Traffic,Traffic Signal Not Working,Open,2
+2025-01-17,Swargate,PMC15637,Waste,Garbage Dumped on Road,Open,3
+2025-01-21,Hinjewadi,PMC41625,Traffic,Traffic Signal Not Working,Open,2
+2025-01-19,Hadapsar,PMC63439,Traffic,Traffic Signal Not Working,Resolved,2
+2025-01-13,Viman Nagar,PMC60410,Water,No Water Supply,Open,4
+2025-01-29,Viman Nagar,PMC49462,Energy,Meter Fault,Resolved,3
+2025-01-11,Hinjewadi,PMC74473,Water,Contaminated Water,Open,4
+2025-01-20,Hadapsar,PMC48582,Water,No Water Supply,Resolved,4
+2025-01-05,Koregaon Park,PMC35095,Energy,Meter Fault,Open,3
+2025-01-03,Hadapsar,PMC11586,Traffic,Potholes,Open,3
+2025-01-21,Swargate,PMC37699,Water,No Water Supply,Resolved,1
+2025-01-10,Swargate,PMC49510,Water,No Water Supply,Open,4
+2025-01-08,Hinjewadi,PMC75429,Traffic,Potholes,Open,2
+2025-01-03,Kothrud,PMC87768,Traffic,Illegal Parking,Resolved,1
+2025-01-19,Hadapsar,PMC32019,Water,Contaminated Water,Open,3
+2025-01-15,Hadapsar,PMC13053,Water,Contaminated Water,Resolved,1
+2025-01-20,Hadapsar,PMC15608,Waste,Dead Animal,Resolved,3
+2025-01-13,Kothrud,PMC57169,Water,Contaminated Water,Open,2
+2025-01-16,Viman Nagar,PMC52811,Waste,Garbage Dumped on Road,Resolved,1
+2025-01-08,Swargate,PMC20343,Energy,Meter Fault,Resolved,3
+2025-01-02,Kothrud,PMC77174,Energy,Voltage Fluctuation,Open,3
+2025-01-06,Swargate,PMC73751,Water,No Water Supply,Resolved,3
+2025-01-17,Hadapsar,PMC25359,Energy,Frequent Power Cut,Open,2
+2025-01-06,Koregaon Park,PMC95021,Water,No Water Supply,Open,4
+2025-01-20,Viman Nagar,PMC43206,Waste,Garbage Dumped on Road,Open,4
+2025-01-25,Koregaon Park,PMC94690,Traffic,Traffic Signal Not Working,Resolved,1
+2025-01-01,Hinjewadi,PMC44374,Traffic,Potholes,In Progress,2
+2025-01-26,Swargate,PMC93961,Traffic,Illegal Parking,Open,2
+2025-01-02,Kothrud,PMC70348,Traffic,Illegal Parking,Resolved,1
+2025-01-15,Koregaon Park,PMC22804,Waste,Bin Overflowing,Resolved,4
+2025-01-27,Hadapsar,PMC47917,Energy,Meter Fault,Resolved,4
+2025-01-14,Kothrud,PMC55419,Traffic,Traffic Signal Not Working,Resolved,1
+2025-01-30,Kothrud,PMC30931,Water,No Water Supply,Resolved,2
+2025-01-06,Hinjewadi,PMC94136,Traffic,Traffic Signal Not Working,Resolved,3
+2025-01-21,Kothrud,PMC35435,Waste,Dead Animal,Resolved,2
+2025-01-09,Viman Nagar,PMC82934,Traffic,Potholes,In Progress,4
+2025-01-06,Koregaon Park,PMC85446,Traffic,Traffic Signal Not Working,Open,4
+2025-01-19,Koregaon Park,PMC22849,Waste,Garbage Dumped on Road,Resolved,1
+2025-01-26,Koregaon Park,PMC76697,Traffic,Potholes,Open,4
+2025-01-08,Koregaon Park,PMC23890,Water,No Water Supply,In Progress,1
+2025-01-20,Hinjewadi,PMC77510,Traffic,Illegal Parking,Open,1
+2025-01-28,Hadapsar,PMC61576,Traffic,Potholes,Resolved,2
+2025-01-04,Koregaon Park,PMC72558,Energy,Meter Fault,Resolved,1
+2025-01-20,Hinjewadi,PMC77579,Traffic,Illegal Parking,Resolved,2
+2025-01-30,Hinjewadi,PMC51313,Traffic,Illegal Parking,Resolved,1
+2025-01-19,Hinjewadi,PMC18086,Traffic,Illegal Parking,Resolved,1
+2025-01-10,Hadapsar,PMC81728,Waste,Bin Overflowing,In Progress,4
+2025-01-04,Viman Nagar,PMC99845,Traffic,Traffic Signal Not Working,Resolved,2
+2025-01-16,Hinjewadi,PMC36298,Water,Contaminated Water,Resolved,3
+2025-01-30,Viman Nagar,PMC44949,Traffic,Traffic Signal Not Working,Resolved,4
+2025-01-21,Kothrud,PMC48857,Traffic,Potholes,Resolved,3
+2025-01-21,Hinjewadi,PMC24628,Traffic,Traffic Signal Not Working,Resolved,3
+2025-01-13,Hadapsar,PMC57094,Energy,Meter Fault,Resolved,2
+2025-01-15,Hadapsar,PMC70204,Energy,Voltage Fluctuation,Open,1
+2025-01-17,Koregaon Park,PMC68487,Water,No Water Supply,Resolved,3
+2025-01-12,Kothrud,PMC79767,Energy,Meter Fault,Resolved,3
+2025-01-12,Viman Nagar,PMC73714,Waste,Garbage Dumped on Road,Open,3
+2025-01-21,Swargate,PMC61285,Traffic,Potholes,Resolved,4
+2025-01-30,Kothrud,PMC63279,Waste,Garbage Dumped on Road,Resolved,1
+2025-01-18,Koregaon Park,PMC13714,Water,No Water Supply,In Progress,4
+2025-01-12,Swargate,PMC96554,Traffic,Traffic Signal Not Working,Resolved,1
+2025-01-28,Koregaon Park,PMC47689,Traffic,Potholes,In Progress,3
+2025-01-09,Kothrud,PMC96738,Energy,Voltage Fluctuation,Open,2
+2025-01-21,Kothrud,PMC55062,Traffic,Potholes,In Progress,2
+2025-01-28,Hinjewadi,PMC64839,Traffic,Traffic Signal Not Working,Open,4
+2025-01-14,Hinjewadi,PMC21629,Traffic,Illegal Parking,Resolved,4
+2025-01-16,Koregaon Park,PMC64107,Waste,Bin Overflowing,Open,4
+2025-01-30,Hinjewadi,PMC38167,Waste,Bin Overflowing,Open,3
+2025-01-06,Koregaon Park,PMC46948,Energy,Frequent Power Cut,Resolved,3
+2025-01-11,Hinjewadi,PMC47227,Traffic,Potholes,Resolved,2
+2025-01-27,Swargate,PMC18627,Traffic,Potholes,Resolved,3
+2025-01-11,Viman Nagar,PMC12409,Waste,Garbage Dumped on Road,Resolved,4
+2025-01-05,Hadapsar,PMC58819,Waste,Dead Animal,Resolved,4
+2025-01-05,Swargate,PMC58796,Waste,Dead Animal,Resolved,2
+2025-01-06,Swargate,PMC75688,Traffic,Potholes,Resolved,1
+2025-01-09,Viman Nagar,PMC34205,Water,No Water Supply,In Progress,2
+2025-01-01,Kothrud,PMC42067,Water,No Water Supply,Resolved,4
+2025-01-21,Hadapsar,PMC11655,Traffic,Traffic Signal Not Working,Resolved,3
+2025-01-19,Hadapsar,PMC39764,Waste,Dead Animal,Resolved,3
+2025-01-05,Kothrud,PMC46793,Energy,Frequent Power Cut,Resolved,3
+2025-01-11,Swargate,PMC15978,Water,No Water Supply,Resolved,1
+2025-01-29,Hinjewadi,PMC39611,Traffic,Potholes,Resolved,2
+2025-01-26,Viman Nagar,PMC94831,Water,No Water Supply,Open,4
+2025-01-07,Hinjewadi,PMC80746,Water,Contaminated Water,Resolved,1
+2025-01-22,Koregaon Park,PMC34692,Traffic,Illegal Parking,Open,3
+2025-01-23,Swargate,PMC31247,Traffic,Potholes,Open,1
+2025-01-13,Koregaon Park,PMC41501,Traffic,Illegal Parking,In Progress,1
+2025-01-28,Viman Nagar,PMC31292,Energy,Frequent Power Cut,Open,1
+2025-01-06,Swargate,PMC46814,Waste,Dead Animal,Open,1
+2025-01-19,Kothrud,PMC87052,Energy,Frequent Power Cut,Resolved,1
+2025-01-07,Swargate,PMC23442,Waste,Bin Overflowing,Resolved,4
+2025-01-18,Koregaon Park,PMC11651,Energy,Meter Fault,In Progress,1
+2025-01-07,Kothrud,PMC70370,Waste,Bin Overflowing,Open,4
+2025-01-26,Hinjewadi,PMC47437,Traffic,Illegal Parking,Open,2
+2025-01-13,Swargate,PMC58387,Water,No Water Supply,Open,3
+2025-01-11,Swargate,PMC28093,Traffic,Illegal Parking,Open,3
+2025-01-08,Hadapsar,PMC86019,Water,Contaminated Water,Open,1
+2025-01-30,Hinjewadi,PMC71426,Traffic,Traffic Signal Not Working,In Progress,1
+2025-01-12,Hadapsar,PMC38127,Traffic,Traffic Signal Not Working,Open,2
+2025-01-01,Koregaon Park,PMC54477,Traffic,Traffic Signal Not Working,Resolved,3
+2025-01-05,Koregaon Park,PMC68056,Water,Contaminated Water,Resolved,3
+2025-01-01,Hinjewadi,PMC37954,Waste,Garbage Dumped on Road,Open,1
+2025-01-09,Hadapsar,PMC73073,Energy,Voltage Fluctuation,Open,4
+2025-01-04,Koregaon Park,PMC82142,Energy,Voltage Fluctuation,Resolved,4
+2025-01-26,Kothrud,PMC37534,Traffic,Traffic Signal Not Working,Open,4
+2025-01-22,Koregaon Park,PMC86050,Energy,Voltage Fluctuation,Resolved,3
+2025-01-11,Hadapsar,PMC15927,Water,Contaminated Water,Open,2
+2025-01-26,Koregaon Park,PMC99521,Waste,Bin Overflowing,Open,4
+2025-01-06,Kothrud,PMC39455,Energy,Frequent Power Cut,Resolved,2
+2025-01-01,Koregaon Park,PMC56762,Waste,Bin Overflowing,Resolved,2
+2025-01-20,Hinjewadi,PMC44339,Traffic,Traffic Signal Not Working,Open,4
+2025-01-05,Viman Nagar,PMC35659,Waste,Bin Overflowing,Resolved,2
+2025-01-25,Hinjewadi,PMC20933,Traffic,Traffic Signal Not Working,Resolved,1
+2025-01-18,Hadapsar,PMC31019,Energy,Frequent Power Cut,Open,3
+2025-01-30,Hinjewadi,PMC53502,Traffic,Potholes,In Progress,1
+2025-01-12,Hadapsar,PMC82086,Energy,Frequent Power Cut,Resolved,2
+2025-01-20,Swargate,PMC44465,Energy,Frequent Power Cut,Open,4
+2025-01-24,Koregaon Park,PMC80342,Waste,Bin Overflowing,Resolved,2
+2025-01-13,Koregaon Park,PMC67992,Waste,Bin Overflowing,Resolved,3
+2025-01-05,Viman Nagar,PMC46709,Traffic,Potholes,Open,3
+2025-01-28,Koregaon Park,PMC38882,Energy,Frequent Power Cut,Resolved,1
+2025-01-20,Koregaon Park,PMC97006,Waste,Bin Overflowing,Resolved,2
+2025-01-06,Swargate,PMC78489,Traffic,Illegal Parking,Resolved,1
+2025-01-22,Hadapsar,PMC53773,Waste,Garbage Dumped on Road,Resolved,4
+2025-01-25,Viman Nagar,PMC68593,Water,Contaminated Water,Resolved,3
+2025-01-01,Hinjewadi,PMC63349,Traffic,Potholes,Open,4
+2025-01-30,Hadapsar,PMC66697,Energy,Meter Fault,Resolved,1
+2025-01-28,Hinjewadi,PMC51834,Traffic,Illegal Parking,Resolved,1
+2025-01-05,Koregaon Park,PMC51532,Waste,Dead Animal,Resolved,2
+2025-01-04,Swargate,PMC88194,Energy,Frequent Power Cut,Resolved,4
+2025-01-17,Kothrud,PMC23359,Energy,Voltage Fluctuation,In Progress,1
+2025-01-21,Viman Nagar,PMC31644,Waste,Bin Overflowing,Resolved,4
+2025-01-15,Swargate,PMC57624,Water,No Water Supply,Resolved,1
+2025-01-04,Hinjewadi,PMC76217,Energy,Frequent Power Cut,Resolved,4
+2025-01-08,Koregaon Park,PMC28338,Traffic,Illegal Parking,In Progress,4
+2025-01-05,Koregaon Park,PMC12779,Waste,Bin Overflowing,Resolved,2
+2025-01-01,Hadapsar,PMC27580,Waste,Bin Overflowing,In Progress,3
+2025-01-18,Kothrud,PMC57574,Energy,Voltage Fluctuation,Open,2
+2025-01-22,Hadapsar,PMC20261,Traffic,Illegal Parking,Open,4
+2025-01-23,Swargate,PMC44065,Water,No Water Supply,Open,2
+2025-01-02,Kothrud,PMC82316,Water,No Water Supply,Open,1
+2025-01-25,Koregaon Park,PMC45423,Energy,Voltage Fluctuation,Open,2
+2025-01-24,Hadapsar,PMC97720,Waste,Dead Animal,Resolved,1
+2025-01-20,Hinjewadi,PMC90528,Energy,Meter Fault,Resolved,1
+2025-01-11,Koregaon Park,PMC84656,Traffic,Illegal Parking,Open,1
+2025-01-29,Swargate,PMC56317,Traffic,Illegal Parking,Open,2
+2025-01-10,Swargate,PMC67499,Traffic,Illegal Parking,Resolved,1
+2025-01-19,Viman Nagar,PMC23245,Energy,Meter Fault,Resolved,1
+2025-01-14,Viman Nagar,PMC80218,Water,Contaminated Water,Resolved,4
+2025-01-23,Hadapsar,PMC83346,Waste,Bin Overflowing,Open,3
+2025-01-24,Kothrud,PMC30880,Traffic,Illegal Parking,In Progress,1
+2025-01-16,Kothrud,PMC86058,Traffic,Illegal Parking,Open,3
+2025-01-20,Kothrud,PMC55179,Energy,Meter Fault,Resolved,2
+2025-01-11,Koregaon Park,PMC57737,Traffic,Illegal Parking,Resolved,1
+2025-01-24,Hinjewadi,PMC42078,Traffic,Traffic Signal Not Working,Resolved,1
+2025-01-29,Viman Nagar,PMC36436,Energy,Frequent Power Cut,Open,2
+2025-01-24,Kothrud,PMC20365,Energy,Frequent Power Cut,Open,1
+2025-01-15,Koregaon Park,PMC95057,Waste,Bin Overflowing,In Progress,1
+2025-01-22,Hinjewadi,PMC64047,Waste,Dead Animal,Resolved,3
+2025-01-27,Hadapsar,PMC67800,Water,No Water Supply,Open,3
+2025-01-06,Koregaon Park,PMC77235,Energy,Frequent Power Cut,Resolved,1
+2025-01-28,Koregaon Park,PMC79192,Waste,Bin Overflowing,In Progress,1
+2025-01-28,Hadapsar,PMC98711,Waste,Dead Animal,Resolved,2
+2025-01-10,Koregaon Park,PMC83129,Water,Contaminated Water,Open,1
+2025-01-26,Hinjewadi,PMC52287,Energy,Voltage Fluctuation,Resolved,2
+2025-01-20,Hadapsar,PMC16925,Water,Contaminated Water,Open,3
+2025-01-24,Kothrud,PMC31343,Energy,Voltage Fluctuation,Resolved,1
+2025-01-23,Swargate,PMC63194,Waste,Dead Animal,Resolved,2
+2025-01-16,Swargate,PMC41900,Waste,Bin Overflowing,Open,3
+2025-01-13,Viman Nagar,PMC63451,Waste,Bin Overflowing,In Progress,1
+2025-01-12,Koregaon Park,PMC85836,Traffic,Potholes,Resolved,1
+2025-01-03,Viman Nagar,PMC47832,Traffic,Traffic Signal Not Working,Resolved,3
+2025-01-24,Hinjewadi,PMC80779,Water,Contaminated Water,Resolved,3
+2025-01-28,Koregaon Park,PMC65650,Traffic,Illegal Parking,Open,2
+2025-01-27,Viman Nagar,PMC75312,Waste,Bin Overflowing,Open,1
+2025-01-26,Swargate,PMC70951,Energy,Frequent Power Cut,In Progress,4
+2025-01-21,Swargate,PMC61489,Energy,Frequent Power Cut,Open,3
+2025-01-09,Hinjewadi,PMC12900,Traffic,Traffic Signal Not Working,Resolved,4
+2025-01-25,Hadapsar,PMC70829,Energy,Meter Fault,Open,3
+2025-01-16,Kothrud,PMC32917,Water,No Water Supply,Resolved,2
+2025-01-10,Swargate,PMC73838,Waste,Garbage Dumped on Road,Resolved,4
+2025-01-04,Kothrud,PMC94724,Waste,Bin Overflowing,Resolved,4
+2025-01-13,Hinjewadi,PMC91082,Water,No Water Supply,Resolved,3
+2025-01-05,Hinjewadi,PMC23063,Traffic,Traffic Signal Not Working,In Progress,2
+2025-01-24,Hadapsar,PMC77640,Traffic,Traffic Signal Not Working,Resolved,2
+2025-01-20,Koregaon Park,PMC55859,Traffic,Illegal Parking,Open,2
+2025-01-22,Koregaon Park,PMC35425,Energy,Voltage Fluctuation,Open,3
+2025-01-05,Kothrud,PMC34049,Traffic,Traffic Signal Not Working,Resolved,3
+2025-01-26,Kothrud,PMC16942,Traffic,Illegal Parking,Open,4
+2025-01-14,Swargate,PMC30741,Energy,Frequent Power Cut,Open,3
+2025-01-01,Koregaon Park,PMC33118,Traffic,Potholes,Resolved,4
+2025-01-23,Swargate,PMC25909,Water,No Water Supply,Open,4
+2025-01-26,Koregaon Park,PMC49848,Traffic,Traffic Signal Not Working,Resolved,2
+2025-01-23,Swargate,PMC20954,Energy,Frequent Power Cut,Resolved,4
+2025-01-17,Swargate,PMC67247,Waste,Bin Overflowing,Resolved,4
+2025-01-30,Kothrud,PMC96979,Traffic,Traffic Signal Not Working,Resolved,4
+2025-01-18,Koregaon Park,PMC71454,Water,No Water Supply,Resolved,1
+2025-01-14,Hinjewadi,PMC13514,Traffic,Potholes,Open,3
+2025-01-19,Kothrud,PMC39568,Traffic,Illegal Parking,Resolved,4
+2025-01-01,Swargate,PMC25289,Traffic,Traffic Signal Not Working,Resolved,3
+2025-01-28,Swargate,PMC52803,Waste,Dead Animal,Resolved,1
+2025-01-25,Kothrud,PMC52871,Traffic,Potholes,Open,4
+2025-01-03,Hadapsar,PMC19928,Traffic,Potholes,Resolved,1
+2025-01-09,Kothrud,PMC86859,Traffic,Traffic Signal Not Working,Open,2
+2025-01-05,Viman Nagar,PMC47074,Traffic,Illegal Parking,In Progress,3
+2025-01-23,Viman Nagar,PMC75523,Energy,Frequent Power Cut,Open,3
+2025-01-25,Viman Nagar,PMC94463,Water,No Water Supply,Open,1
+2025-01-28,Kothrud,PMC64857,Energy,Voltage Fluctuation,Resolved,2
+2025-01-19,Swargate,PMC79193,Water,No Water Supply,In Progress,1
+2025-01-27,Hinjewadi,PMC91797,Traffic,Potholes,Resolved,4
+2025-01-16,Kothrud,PMC39901,Water,Contaminated Water,Resolved,2
+2025-01-12,Hinjewadi,PMC49158,Waste,Dead Animal,In Progress,3
+2025-01-20,Viman Nagar,PMC62425,Energy,Meter Fault,Resolved,3
+2025-01-10,Viman Nagar,PMC49155,Energy,Meter Fault,In Progress,3
+2025-01-17,Swargate,PMC27350,Waste,Dead Animal,Resolved,1
+2025-01-15,Viman Nagar,PMC62178,Energy,Meter Fault,Resolved,1
+2025-01-08,Hinjewadi,PMC38372,Traffic,Illegal Parking,Open,2
+2025-01-21,Viman Nagar,PMC31194,Waste,Garbage Dumped on Road,Resolved,4
+2025-01-14,Swargate,PMC33622,Waste,Dead Animal,Open,4
+2025-01-01,Swargate,PMC37883,Energy,Meter Fault,Resolved,4
+2025-01-06,Hinjewadi,PMC49949,Energy,Voltage Fluctuation,Open,2
+2025-01-14,Swargate,PMC20667,Water,No Water Supply,Resolved,2
+2025-01-20,Hinjewadi,PMC49428,Traffic,Potholes,Open,4
+2025-01-11,Kothrud,PMC19865,Energy,Voltage Fluctuation,Resolved,4
+2025-01-07,Hinjewadi,PMC82205,Traffic,Illegal Parking,Resolved,2
+2025-01-08,Kothrud,PMC93688,Water,No Water Supply,Resolved,1
+2025-01-29,Viman Nagar,PMC54984,Water,Contaminated Water,Resolved,1
+2025-01-16,Hinjewadi,PMC59407,Traffic,Traffic Signal Not Working,Resolved,4
+2025-01-05,Hinjewadi,PMC82720,Traffic,Traffic Signal Not Working,Open,3
+2025-01-20,Kothrud,PMC47447,Water,Contaminated Water,Resolved,4
+2025-01-10,Hadapsar,PMC87112,Traffic,Traffic Signal Not Working,Resolved,1
+2025-01-20,Swargate,PMC57572,Waste,Garbage Dumped on Road,Resolved,1
+2025-01-06,Hadapsar,PMC43790,Waste,Garbage Dumped on Road,Open,2
+2025-01-08,Koregaon Park,PMC78749,Traffic,Potholes,Resolved,4
+2025-01-29,Swargate,PMC41242,Waste,Garbage Dumped on Road,In Progress,1
+2025-01-10,Kothrud,PMC29698,Water,Contaminated Water,Resolved,1
+2025-01-09,Koregaon Park,PMC91685,Energy,Meter Fault,Resolved,1
+2025-01-19,Koregaon Park,PMC59485,Energy,Meter Fault,Resolved,4
+2025-01-12,Kothrud,PMC36680,Water,Contaminated Water,Resolved,4
+2025-01-19,Koregaon Park,PMC58912,Traffic,Traffic Signal Not Working,Open,1
+2025-01-05,Koregaon Park,PMC73635,Water,Contaminated Water,Resolved,3
+2025-01-25,Hinjewadi,PMC77337,Traffic,Traffic Signal Not Working,Resolved,4
+2025-01-28,Hadapsar,PMC64652,Waste,Bin Overflowing,Open,2
+2025-01-29,Kothrud,PMC32494,Water,Contaminated Water,In Progress,2
+2025-01-19,Swargate,PMC46754,Traffic,Illegal Parking,Resolved,1
+2025-01-11,Koregaon Park,PMC67101,Water,Contaminated Water,Resolved,4
+2025-01-10,Viman Nagar,PMC93900,Water,No Water Supply,Resolved,3
+2025-01-28,Swargate,PMC68299,Water,No Water Supply,Resolved,2
+2025-01-24,Viman Nagar,PMC94517,Water,No Water Supply,Open,3
+2025-01-04,Kothrud,PMC90134,Water,Contaminated Water,Open,2
+2025-01-10,Koregaon Park,PMC14085,Waste,Garbage Dumped on Road,Open,4
+2025-01-26,Kothrud,PMC17824,Energy,Meter Fault,Resolved,2
+2025-01-11,Swargate,PMC72486,Energy,Meter Fault,Open,2
+2025-01-17,Koregaon Park,PMC20797,Waste,Dead Animal,Resolved,2
+2025-01-05,Kothrud,PMC75145,Water,No Water Supply,Resolved,2
+2025-01-06,Kothrud,PMC32525,Water,No Water Supply,Resolved,3
+2025-01-11,Kothrud,PMC25385,Waste,Dead Animal,Open,2
+2025-01-30,Kothrud,PMC86167,Waste,Garbage Dumped on Road,Open,4
+2025-01-05,Viman Nagar,PMC52003,Water,Contaminated Water,Open,2
+2025-01-27,Viman Nagar,PMC45562,Energy,Frequent Power Cut,Open,2
+2025-01-07,Kothrud,PMC83509,Water,Contaminated Water,Resolved,2
+2025-01-09,Hadapsar,PMC44715,Traffic,Traffic Signal Not Working,Resolved,4
+2025-01-23,Viman Nagar,PMC58957,Traffic,Potholes,Resolved,1
+2025-01-07,Hinjewadi,PMC58628,Water,No Water Supply,In Progress,3
+2025-01-06,Swargate,PMC43220,Waste,Bin Overflowing,In Progress,2
+2025-01-23,Hinjewadi,PMC62514,Traffic,Potholes,Open,1
+2025-01-19,Hinjewadi,PMC27839,Traffic,Potholes,Resolved,3
+2025-01-11,Hinjewadi,PMC97278,Traffic,Traffic Signal Not Working,Resolved,2
+2025-01-15,Swargate,PMC11119,Waste,Dead Animal,Resolved,2
+2025-01-04,Hadapsar,PMC80151,Traffic,Potholes,Open,1
+2025-01-22,Koregaon Park,PMC70666,Energy,Meter Fault,Open,3
+2025-01-27,Koregaon Park,PMC65920,Water,Contaminated Water,Open,4
+2025-01-06,Koregaon Park,PMC80694,Traffic,Illegal Parking,Resolved,3
+2025-01-05,Viman Nagar,PMC96300,Traffic,Illegal Parking,Resolved,3
+2025-01-16,Swargate,PMC75113,Waste,Garbage Dumped on Road,Resolved,4
+2025-01-21,Hinjewadi,PMC94918,Waste,Bin Overflowing,Resolved,3
+2025-01-04,Viman Nagar,PMC45842,Water,Contaminated Water,Resolved,3
+2025-01-30,Viman Nagar,PMC97288,Traffic,Traffic Signal Not Working,Open,1
+2025-01-23,Hadapsar,PMC44945,Traffic,Potholes,Open,2
+2025-01-29,Viman Nagar,PMC60807,Water,Contaminated Water,Resolved,1
+2025-01-04,Viman Nagar,PMC65017,Waste,Dead Animal,Resolved,3
+2025-01-19,Hadapsar,PMC23713,Waste,Dead Animal,Open,4
+2025-01-30,Koregaon Park,PMC41480,Waste,Garbage Dumped on Road,Open,2
+2025-01-15,Koregaon Park,PMC33824,Waste,Dead Animal,Open,4
+2025-01-18,Koregaon Park,PMC79776,Waste,Garbage Dumped on Road,Open,3
+2025-01-25,Hadapsar,PMC90707,Water,Contaminated Water,In Progress,2
+2025-01-08,Koregaon Park,PMC89912,Traffic,Illegal Parking,Resolved,3
+2025-01-17,Hinjewadi,PMC84945,Water,Contaminated Water,Open,4
+2025-01-15,Swargate,PMC51596,Water,No Water Supply,In Progress,3
+2025-01-13,Hinjewadi,PMC92992,Traffic,Illegal Parking,In Progress,4
+2025-01-01,Viman Nagar,PMC46292,Waste,Dead Animal,Resolved,2
+2025-01-20,Hinjewadi,PMC16572,Traffic,Illegal Parking,Resolved,1
+2025-01-23,Viman Nagar,PMC32375,Energy,Meter Fault,Resolved,4
+2025-01-10,Hadapsar,PMC13007,Water,No Water Supply,Open,2
+2025-01-01,Kothrud,PMC45415,Water,No Water Supply,Resolved,2
+2025-01-11,Koregaon Park,PMC18699,Water,Contaminated Water,In Progress,3
+2025-01-09,Hadapsar,PMC81801,Traffic,Potholes,Resolved,3
+2025-01-18,Hinjewadi,PMC11274,Traffic,Illegal Parking,Open,1
+2025-01-28,Swargate,PMC33196,Water,Contaminated Water,Resolved,2
+2025-01-29,Kothrud,PMC41958,Water,Contaminated Water,Resolved,4
+2025-01-25,Koregaon Park,PMC18961,Energy,Frequent Power Cut,Resolved,2
+2025-01-07,Hinjewadi,PMC40588,Traffic,Illegal Parking,Resolved,1
+2025-01-24,Kothrud,PMC28922,Waste,Garbage Dumped on Road,Open,3
+2025-01-04,Koregaon Park,PMC78952,Water,No Water Supply,In Progress,2
+2025-01-20,Hadapsar,PMC50092,Waste,Garbage Dumped on Road,In Progress,2
+2025-01-02,Swargate,PMC49959,Energy,Frequent Power Cut,Resolved,2
+2025-01-11,Koregaon Park,PMC47552,Traffic,Traffic Signal Not Working,Open,2
+2025-01-19,Hinjewadi,PMC36041,Traffic,Illegal Parking,In Progress,2
+2025-01-03,Hadapsar,PMC88761,Water,No Water Supply,In Progress,2
