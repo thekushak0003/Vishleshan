@@ -6,7 +6,6 @@ from plotly.subplots import make_subplots
 import numpy as np
 from datetime import datetime, timedelta
 import warnings
-import time
 warnings.filterwarnings('ignore')
 
 # Page config
@@ -17,28 +16,62 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS
+# Chart template configuration for better visibility
+CHART_TEMPLATE = "plotly_white"
+CHART_CONFIG = {
+    'displayModeBar': True,
+    'displaylogo': False,
+    'modeBarButtonsToRemove': ['pan2d', 'lasso2d', 'select2d']
+}
+
+# Color palette for consistent theming
+COLORS = {
+    'primary': '#667eea',
+    'secondary': '#764ba2',
+    'success': '#51cf66',
+    'warning': '#ffd43b',
+    'danger': '#ff6b6b',
+    'info': '#4ecdc4',
+    'traffic': '#ff6b6b',
+    'energy': '#4ecdc4',
+    'waste': '#95e1d3',
+    'grievances': '#f093fb',
+    'text': '#2c3e50',
+    'bg': '#ffffff'
+}
+
+# Custom CSS with improved contrast
 st.markdown("""
     <style>
     .main {
         padding: 0rem 1rem;
+        background-color: #f8f9fa;
     }
     .stMetric {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         padding: 20px;
         border-radius: 10px;
-        color: white;
+        color: white !important;
     }
     .stMetric label {
         color: white !important;
+        font-weight: 600;
+    }
+    .stMetric [data-testid="stMetricValue"] {
+        color: white !important;
+        font-size: 2rem !important;
+    }
+    .stMetric [data-testid="stMetricDelta"] {
+        color: #e0e0e0 !important;
     }
     .metric-card {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         padding: 20px;
         border-radius: 10px;
-        color: black;
+        color: white;
         text-align: center;
         margin: 10px 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
     .alert-critical {
         background-color: #ff4444;
@@ -47,6 +80,7 @@ st.markdown("""
         color: white;
         margin: 10px 0;
         font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
     .alert-warning {
         background-color: #ffbb33;
@@ -55,6 +89,7 @@ st.markdown("""
         color: #000;
         margin: 10px 0;
         font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
     .alert-success {
         background-color: #00C851;
@@ -63,37 +98,47 @@ st.markdown("""
         color: white;
         margin: 10px 0;
         font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
     .insight-box {
-        background-color: #f0f2f6;
+        background-color: #ffffff;
         padding: 20px;
         border-radius: 8px;
         border-left: 4px solid #667eea;
         margin: 10px 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        color: #2c3e50;
     }
     .recommendation {
-        background-color: #e8f5e9;
+        background-color: #ffffff;
         padding: 15px;
         border-radius: 8px;
         border-left: 4px solid #4caf50;
         margin: 10px 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        color: #2c3e50;
     }
     .pipeline-box {
-        background-color: #e3f2fd;
+        background-color: #ffffff;
         padding: 15px;
         border-radius: 8px;
         border-left: 4px solid #2196f3;
         margin: 10px 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        color: #2c3e50;
     }
     .processing-box {
-        background-color: #f3e5f5;
+        background-color: #ffffff;
         padding: 15px;
         border-radius: 8px;
         border-left: 4px solid #9c27b0;
         margin: 10px 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        color: #2c3e50;
     }
     h1, h2, h3 {
-        color: #667eea;
+        color: #667eea !important;
+        font-weight: 600 !important;
     }
     .source-active {
         background-color: #00C851;
@@ -102,6 +147,7 @@ st.markdown("""
         color: white;
         margin: 5px;
         text-align: center;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
     .source-inactive {
         background-color: #ffbb33;
@@ -110,12 +156,19 @@ st.markdown("""
         color: #000;
         margin: 5px;
         text-align: center;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    div[data-testid="stExpander"] {
+        background-color: white;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        margin: 5px 0;
     }
     </style>
 """, unsafe_allow_html=True)
 
-# Load data
-@st.cache_data
+# Load data with error handling
+@st.cache_data(ttl=3600)
 def load_data():
     try:
         grievances = pd.read_csv('pune_citizen_grievances.csv')
@@ -131,9 +184,27 @@ def load_data():
         waste['Date'] = pd.to_datetime(waste['Date'])
         
         return grievances, energy, traffic, waste
-    except Exception as e:
-        st.error(f"Error loading data: {e}")
+    except FileNotFoundError as e:
+        st.error(f"⚠️ Data files not found. Please ensure all CSV files are in the app directory.")
+        st.info("Required files: pune_citizen_grievances.csv, pune_energy_consumption.csv, pune_traffic_flow.csv, pune_waste_management.csv")
         return None, None, None, None
+    except Exception as e:
+        st.error(f"Error loading data: {str(e)}")
+        return None, None, None, None
+
+# Helper function to create styled layout
+def create_chart_layout(title, xaxis_title="", yaxis_title="", height=400):
+    return dict(
+        title=dict(text=title, font=dict(size=16, color=COLORS['text'], family="Arial, sans-serif")),
+        xaxis=dict(title=xaxis_title, gridcolor='#e0e0e0', titlefont=dict(color=COLORS['text'])),
+        yaxis=dict(title=yaxis_title, gridcolor='#e0e0e0', titlefont=dict(color=COLORS['text'])),
+        height=height,
+        template=CHART_TEMPLATE,
+        paper_bgcolor='white',
+        plot_bgcolor='white',
+        font=dict(color=COLORS['text'], family="Arial, sans-serif"),
+        hovermode='closest'
+    )
 
 # Calculate KPIs
 def calculate_kpis(grievances, energy, traffic, waste):
@@ -152,7 +223,7 @@ def calculate_kpis(grievances, energy, traffic, waste):
     total_grievances = len(grievances)
     open_grievances = len(grievances[grievances['Status'] == 'Open'])
     critical_issues = len(grievances[(grievances['Status'] == 'Open') & (grievances['SLA_Days'] <= 1)])
-    resolution_rate = len(grievances[grievances['Status'] == 'Resolved']) / total_grievances
+    resolution_rate = len(grievances[grievances['Status'] == 'Resolved']) / total_grievances if total_grievances > 0 else 0
     
     zone_stress = {}
     for zone in traffic['Zone_Name'].unique():
@@ -179,11 +250,10 @@ def calculate_kpis(grievances, energy, traffic, waste):
         'zone_stress': zone_stress
     }
 
-# Event processing simulation
+# Event processing
 def detect_events(grievances, energy, traffic, waste):
     events = []
     
-    # Critical traffic events
     critical_traffic = traffic[traffic['Congestion_Index'] > 85]
     for _, row in critical_traffic.head(5).iterrows():
         events.append({
@@ -194,7 +264,6 @@ def detect_events(grievances, energy, traffic, waste):
             'timestamp': datetime.now() - timedelta(minutes=np.random.randint(1, 60))
         })
     
-    # Power cut events
     power_cuts = energy[energy['Power_Cut_Flag'] == 1]
     for _, row in power_cuts.head(3).iterrows():
         events.append({
@@ -205,7 +274,6 @@ def detect_events(grievances, energy, traffic, waste):
             'timestamp': datetime.now() - timedelta(minutes=np.random.randint(1, 90))
         })
     
-    # Bin overflow warnings
     overflow_bins = waste[waste['Avg_Bin_Fill_Level_Percent'] > 85]
     for _, row in overflow_bins.head(3).iterrows():
         events.append({
@@ -216,7 +284,6 @@ def detect_events(grievances, energy, traffic, waste):
             'timestamp': datetime.now() - timedelta(minutes=np.random.randint(1, 120))
         })
     
-    # SLA breach events
     sla_breach = grievances[(grievances['Status'] == 'Open') & (grievances['SLA_Days'] <= 1)]
     for _, row in sla_breach.head(5).iterrows():
         events.append({
@@ -232,50 +299,72 @@ def detect_events(grievances, energy, traffic, waste):
 # Main app
 def main():
     # Sidebar
-    st.sidebar.image("https://via.placeholder.com/200x80?text=LMN+Smart+Cities", use_container_width=True)
-    st.sidebar.title("🏙️ Navigation")
+    st.sidebar.markdown("### 🏙️ LMN Smart Cities")
+    st.sidebar.markdown("**Integrated Analytics Platform**")
+    st.sidebar.markdown("---")
     
     page = st.sidebar.selectbox(
-        "Select Module",
+        "📍 Navigate to",
         ["🏗️ System Architecture", "📊 Executive Dashboard", "⚡ Real-Time Pipeline", 
          "🤖 ML Analytics & Predictions", "🎯 Event Processing & Rules", 
-         "🚨 Automated Actions", "📈 Advanced Insights", "💡 Recommendations"]
+         "🚨 Automated Actions", "📈 Advanced Insights", "💡 Recommendations"],
+        index=1
     )
     
     # Load data
-    grievances, energy, traffic, waste = load_data()
+    with st.spinner("Loading city data..."):
+        grievances, energy, traffic, waste = load_data()
     
     if grievances is None:
-        st.error("Failed to load data. Please ensure CSV files are in the correct location.")
-        return
+        st.stop()
     
     # Date filter
+    st.sidebar.markdown("---")
     st.sidebar.markdown("### 🔧 Filters")
+    
+    min_date = grievances['Date'].min().date()
+    max_date = grievances['Date'].max().date()
+    
     date_range = st.sidebar.date_input(
         "Date Range",
-        value=(grievances['Date'].min(), grievances['Date'].max()),
-        min_value=grievances['Date'].min(),
-        max_value=grievances['Date'].max()
+        value=(min_date, max_date),
+        min_value=min_date,
+        max_value=max_date
     )
     
     zone_filter = st.sidebar.multiselect(
         "Select Zones",
-        options=grievances['Zone_Name'].unique(),
-        default=grievances['Zone_Name'].unique()
+        options=sorted(grievances['Zone_Name'].unique()),
+        default=sorted(grievances['Zone_Name'].unique())
     )
     
+    # Handle single date selection
+    if isinstance(date_range, tuple) and len(date_range) == 2:
+        start_date, end_date = date_range
+    else:
+        start_date = end_date = date_range
+    
     # Filter data
-    mask_g = (grievances['Date'] >= pd.to_datetime(date_range[0])) & (grievances['Date'] <= pd.to_datetime(date_range[1])) & (grievances['Zone_Name'].isin(zone_filter))
-    mask_e = (energy['Date'] >= pd.to_datetime(date_range[0])) & (energy['Date'] <= pd.to_datetime(date_range[1])) & (energy['Zone_Name'].isin(zone_filter))
-    mask_t = (traffic['Date'] >= pd.to_datetime(date_range[0])) & (traffic['Date'] <= pd.to_datetime(date_range[1])) & (traffic['Zone_Name'].isin(zone_filter))
-    mask_w = (waste['Date'] >= pd.to_datetime(date_range[0])) & (waste['Date'] <= pd.to_datetime(date_range[1])) & (waste['Zone_Name'].isin(zone_filter))
+    mask_g = (grievances['Date'].dt.date >= start_date) & (grievances['Date'].dt.date <= end_date) & (grievances['Zone_Name'].isin(zone_filter))
+    mask_e = (energy['Date'].dt.date >= start_date) & (energy['Date'].dt.date <= end_date) & (energy['Zone_Name'].isin(zone_filter))
+    mask_t = (traffic['Date'].dt.date >= start_date) & (traffic['Date'].dt.date <= end_date) & (traffic['Zone_Name'].isin(zone_filter))
+    mask_w = (waste['Date'].dt.date >= start_date) & (waste['Date'].dt.date <= end_date) & (waste['Zone_Name'].isin(zone_filter))
     
     grievances_filtered = grievances[mask_g]
     energy_filtered = energy[mask_e]
     traffic_filtered = traffic[mask_t]
     waste_filtered = waste[mask_w]
     
+    if len(grievances_filtered) == 0:
+        st.warning("⚠️ No data available for the selected filters. Please adjust your selection.")
+        st.stop()
+    
     kpis = calculate_kpis(grievances_filtered, energy_filtered, traffic_filtered, waste_filtered)
+    
+    # Add data info in sidebar
+    st.sidebar.markdown("---")
+    st.sidebar.markdown("### 📊 Data Summary")
+    st.sidebar.info(f"**Records Loaded:**\n- Grievances: {len(grievances_filtered):,}\n- Traffic: {len(traffic_filtered):,}\n- Energy: {len(energy_filtered):,}\n- Waste: {len(waste_filtered):,}")
     
     # Route to selected page
     if page == "🏗️ System Architecture":
@@ -314,65 +403,22 @@ def show_architecture():
         ]
         
         for name, status, count in sources:
-            if status == "Active":
-                st.markdown(f'<div class="source-active">{name}<br/><small>{count} units</small></div>', unsafe_allow_html=True)
-            else:
-                st.markdown(f'<div class="source-inactive">{name}<br/><small>{count} units</small></div>', unsafe_allow_html=True)
+            st.markdown(f'<div class="source-active">{name}<br/><small>{count} units</small></div>', unsafe_allow_html=True)
     
     with col2:
         st.markdown("#### ⚙️ PROCESSING PIPELINE")
         
-        st.markdown('<div class="pipeline-box">', unsafe_allow_html=True)
-        st.markdown("**🔄 Ingestion Layer**")
-        st.markdown("- Real-time data collection")
-        st.markdown("- Protocol normalization")
-        st.markdown("- Initial validation")
-        st.markdown('</div>', unsafe_allow_html=True)
-        
-        st.markdown('<div class="processing-box">', unsafe_allow_html=True)
-        st.markdown("**🎯 Event Processing Engine**")
-        st.markdown("- Rule-based filtering")
-        st.markdown("- Anomaly detection")
-        st.markdown("- Priority classification")
-        st.markdown('</div>', unsafe_allow_html=True)
-        
-        st.markdown('<div class="pipeline-box">', unsafe_allow_html=True)
-        st.markdown("**🧹 Clean & Validate**")
-        st.markdown("- Data quality checks")
-        st.markdown("- Duplicate removal")
-        st.markdown("- Schema enforcement")
-        st.markdown('</div>', unsafe_allow_html=True)
-        
-        st.markdown('<div class="processing-box">', unsafe_allow_html=True)
-        st.markdown("**💾 Structured Storage**")
-        st.markdown("- Time-series DB")
-        st.markdown("- Multi-domain tables")
-        st.markdown("- Query optimization")
-        st.markdown('</div>', unsafe_allow_html=True)
+        st.markdown('<div class="pipeline-box"><strong>🔄 Ingestion Layer</strong><br/>• Real-time collection<br/>• Protocol normalization<br/>• Initial validation</div>', unsafe_allow_html=True)
+        st.markdown('<div class="processing-box"><strong>🎯 Event Processing</strong><br/>• Rule-based filtering<br/>• Anomaly detection<br/>• Priority classification</div>', unsafe_allow_html=True)
+        st.markdown('<div class="pipeline-box"><strong>🧹 Clean & Validate</strong><br/>• Data quality checks<br/>• Duplicate removal<br/>• Schema enforcement</div>', unsafe_allow_html=True)
+        st.markdown('<div class="processing-box"><strong>💾 Structured Storage</strong><br/>• Time-series DB<br/>• Multi-domain tables<br/>• Query optimization</div>', unsafe_allow_html=True)
     
     with col3:
         st.markdown("#### 📊 ANALYTICS & OUTPUT")
         
-        st.markdown('<div class="recommendation">', unsafe_allow_html=True)
-        st.markdown("**🤖 ML & Analytics**")
-        st.markdown("- Predictive models")
-        st.markdown("- Pattern recognition")
-        st.markdown("- Trend analysis")
-        st.markdown('</div>', unsafe_allow_html=True)
-        
-        st.markdown('<div class="insight-box">', unsafe_allow_html=True)
-        st.markdown("**📈 Dashboards & Alerts**")
-        st.markdown("- Real-time KPIs")
-        st.markdown("- Heatmaps")
-        st.markdown("- Automated notifications")
-        st.markdown('</div>', unsafe_allow_html=True)
-        
-        st.markdown('<div class="alert-success">', unsafe_allow_html=True)
-        st.markdown("**⚡ Automated Actions**")
-        st.markdown("- Traffic signal control")
-        st.markdown("- Resource dispatch")
-        st.markdown("- Policy updates")
-        st.markdown('</div>', unsafe_allow_html=True)
+        st.markdown('<div class="recommendation"><strong>🤖 ML & Analytics</strong><br/>• Predictive models<br/>• Pattern recognition<br/>• Trend analysis</div>', unsafe_allow_html=True)
+        st.markdown('<div class="insight-box"><strong>📈 Dashboards & Alerts</strong><br/>• Real-time KPIs<br/>• Heatmaps<br/>• Automated notifications</div>', unsafe_allow_html=True)
+        st.markdown('<div class="alert-success"><strong>⚡ Automated Actions</strong><br/>• Traffic signal control<br/>• Resource dispatch<br/>• Policy updates</div>', unsafe_allow_html=True)
     
     st.markdown("---")
     
@@ -395,7 +441,6 @@ def show_architecture():
     # Data flow visualization
     st.markdown("### 🌊 Real-Time Data Flow")
     
-    # Create flow chart data
     flow_data = pd.DataFrame({
         'Time': pd.date_range(start=datetime.now() - timedelta(hours=1), periods=60, freq='1min'),
         'Ingestion': np.random.randint(800, 1200, 60),
@@ -404,25 +449,149 @@ def show_architecture():
     })
     
     fig = go.Figure()
-    fig.add_trace(go.Scatter(x=flow_data['Time'], y=flow_data['Ingestion'], name='Ingestion', fill='tonexty', line=dict(color='#4ecdc4')))
-    fig.add_trace(go.Scatter(x=flow_data['Time'], y=flow_data['Processing'], name='Processing', fill='tonexty', line=dict(color='#667eea')))
-    fig.add_trace(go.Scatter(x=flow_data['Time'], y=flow_data['Storage'], name='Storage', fill='tonexty', line=dict(color='#95e1d3')))
+    fig.add_trace(go.Scatter(x=flow_data['Time'], y=flow_data['Ingestion'], name='Ingestion', 
+                            fill='tonexty', line=dict(color=COLORS['info'], width=2)))
+    fig.add_trace(go.Scatter(x=flow_data['Time'], y=flow_data['Processing'], name='Processing', 
+                            fill='tonexty', line=dict(color=COLORS['primary'], width=2)))
+    fig.add_trace(go.Scatter(x=flow_data['Time'], y=flow_data['Storage'], name='Storage', 
+                            fill='tonexty', line=dict(color=COLORS['waste'], width=2)))
     
-    fig.update_layout(
-        title="Data Processing Pipeline - Last Hour",
-        xaxis_title="Time",
-        yaxis_title="Records/min",
-        hovermode='x unified',
-        height=400
-    )
+    fig.update_layout(**create_chart_layout("Data Processing Pipeline - Last Hour", "Time", "Records/min"))
+    st.plotly_chart(fig, use_container_width=True, config=CHART_CONFIG)
+
+def show_executive_dashboard(kpis, grievances, energy, traffic, waste):
+    st.title("📊 Executive Dashboard")
+    st.markdown("### City Operations Command Center")
     
-    st.plotly_chart(fig, use_container_width=True)
+    # Top KPIs
+    col1, col2, col3, col4, col5 = st.columns(5)
+    
+    with col1:
+        st.metric("Avg Energy Load", f"{kpis['avg_energy']/1000:.2f}K kWh", 
+                 delta=f"{-5.2}%" if kpis['power_cuts'] > 10 else f"+2.1%")
+    
+    with col2:
+        st.metric("Traffic Flow Efficiency", f"{kpis['flow_efficiency']:.2%}",
+                 delta=f"{-8}%" if kpis['avg_congestion'] > 50 else f"+3%")
+    
+    with col3:
+        st.metric("Critical Issues", f"{kpis['critical_issues']}",
+                 delta=f"+{kpis['critical_issues']}" if kpis['critical_issues'] > 0 else "0",
+                 delta_color="inverse")
+    
+    with col4:
+        st.metric("Grievance Resolution", f"{kpis['resolution_rate']:.1%}",
+                 delta=f"+{5}%" if kpis['resolution_rate'] > 0.6 else f"-{3}%")
+    
+    with col5:
+        st.metric("Avg Bin Fill Level", f"{kpis['avg_bin_fill']:.1f}%",
+                 delta=f"-{2}%" if kpis['avg_bin_fill'] < 70 else f"+{4}%",
+                 delta_color="inverse")
+    
+    st.markdown("---")
+    
+    # Main visualizations
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown("### 🗺️ Zone Stress Factor")
+        zone_stress_df = pd.DataFrame(list(kpis['zone_stress'].items()), columns=['Zone', 'Stress'])
+        zone_stress_df = zone_stress_df.sort_values('Stress', ascending=True)
+        
+        fig = go.Figure(data=[go.Bar(
+            x=zone_stress_df['Stress'],
+            y=zone_stress_df['Zone'],
+            orientation='h',
+            marker=dict(
+                color=zone_stress_df['Stress'],
+                colorscale='RdYlGn_r',
+                showscale=True,
+                colorbar=dict(title=dict(text="Stress", font=dict(color=COLORS['text'])))
+            ),
+            text=zone_stress_df['Stress'].round(0),
+            textposition='auto',
+            textfont=dict(color='white', size=12)
+        )])
+        
+        fig.update_layout(**create_chart_layout("Composite Zone Stress Index", "Stress Score", "Zone"))
+        st.plotly_chart(fig, use_container_width=True, config=CHART_CONFIG)
+    
+    with col2:
+        st.markdown("### 🚦 Traffic Congestion by Hour")
+        hourly_traffic = traffic.groupby('Hour')['Congestion_Index'].mean().reset_index()
+        
+        fig = go.Figure()
+        fig.add_trace(go.Scatter(
+            x=hourly_traffic['Hour'],
+            y=hourly_traffic['Congestion_Index'],
+            mode='lines+markers',
+            fill='tozeroy',
+            line=dict(color=COLORS['traffic'], width=3),
+            marker=dict(size=8, color=COLORS['traffic'])
+        ))
+        fig.add_hline(y=70, line_dash="dash", line_color="red", 
+                     annotation=dict(text="Critical Threshold", font=dict(color=COLORS['text'])))
+        
+        fig.update_layout(**create_chart_layout("Average Congestion Throughout the Day", "Hour of Day", "Congestion Index"))
+        st.plotly_chart(fig, use_container_width=True, config=CHART_CONFIG)
+    
+    # Bottom row
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        st.markdown("### ⚡ Energy Consumption Trend")
+        daily_energy = energy.groupby('Date')['Energy_Consumption_kWh'].mean().reset_index()
+        
+        fig = go.Figure()
+        fig.add_trace(go.Scatter(
+            x=daily_energy['Date'],
+            y=daily_energy['Energy_Consumption_kWh'],
+            mode='lines',
+            line=dict(color=COLORS['energy'], width=3),
+            fill='tozeroy'
+        ))
+        
+        fig.update_layout(**create_chart_layout("Daily Average Energy Consumption", "Date", "Energy (kWh)", 300))
+        st.plotly_chart(fig, use_container_width=True, config=CHART_CONFIG)
+    
+    with col2:
+        st.markdown("### 🎫 Grievance Status Distribution")
+        status_counts = grievances['Status'].value_counts()
+        
+        fig = go.Figure(data=[go.Pie(
+            labels=status_counts.index,
+            values=status_counts.values,
+            hole=0.4,
+            marker=dict(colors=[COLORS['success'], COLORS['warning'], COLORS['danger']]),
+            textfont=dict(size=14, color='white')
+        )])
+        
+        fig.update_layout(**create_chart_layout("Grievance Status", height=300))
+        st.plotly_chart(fig, use_container_width=True, config=CHART_CONFIG)
+    
+    with col3:
+        st.markdown("### ♻️ Waste Segregation by Zone")
+        zone_segregation = waste.groupby('Zone_Name')['Segregation_Efficiency_Percent'].mean().reset_index()
+        
+        fig = go.Figure()
+        fig.add_trace(go.Bar(
+            x=zone_segregation['Zone_Name'],
+            y=zone_segregation['Segregation_Efficiency_Percent'],
+            marker_color=COLORS['waste'],
+            text=zone_segregation['Segregation_Efficiency_Percent'].round(1),
+            textposition='auto',
+            textfont=dict(color=COLORS['text'])
+        ))
+        fig.add_hline(y=80, line_dash="dash", line_color="green",
+                     annotation=dict(text="Target: 80%", font=dict(color=COLORS['text'])))
+        
+        fig.update_layout(**create_chart_layout("Average Segregation Efficiency", "", "%", 300))
+        st.plotly_chart(fig, use_container_width=True, config=CHART_CONFIG)
 
 def show_realtime_pipeline(grievances, energy, traffic, waste):
     st.title("⚡ Real-Time Data Pipeline Monitor")
     st.markdown("### Live System Status Dashboard")
     
-    # Pipeline health
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
@@ -436,7 +605,6 @@ def show_realtime_pipeline(grievances, energy, traffic, waste):
     
     st.markdown("---")
     
-    # Real-time data streams
     st.markdown("### 📡 Active Data Streams")
     
     streams = [
@@ -454,37 +622,41 @@ def show_realtime_pipeline(grievances, energy, traffic, waste):
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        # Stream table
         fig = go.Figure(data=[go.Table(
             header=dict(
-                values=['Stream', 'Status', 'Message Rate', 'Last Update', 'Quality %'],
-                fill_color='#667eea',
-                font=dict(color='white', size=13),
-                align='left'
+                values=['<b>Stream</b>', '<b>Status</b>', '<b>Message Rate</b>', '<b>Last Update</b>', '<b>Quality %</b>'],
+                fill_color=COLORS['primary'],
+                font=dict(color='white', size=14),
+                align='left',
+                height=40
             ),
             cells=dict(
                 values=[stream_df[col] for col in stream_df.columns],
                 fill_color=[['#e8f5e9' if status == 'Active' else '#ffebee' for status in stream_df['status']]],
+                font=dict(color=COLORS['text'], size=12),
                 align='left',
-                font_size=12,
-                height=30
+                height=35
             )
         )])
-        fig.update_layout(height=350, margin=dict(l=0, r=0, t=0, b=0))
-        st.plotly_chart(fig, use_container_width=True)
+        fig.update_layout(
+            margin=dict(l=0, r=0, t=20, b=0),
+            height=350,
+            paper_bgcolor='white'
+        )
+        st.plotly_chart(fig, use_container_width=True, config=CHART_CONFIG)
     
     with col2:
-        # Quality gauge
         avg_quality = stream_df['quality'].mean()
         
         fig = go.Figure(go.Indicator(
             mode="gauge+number+delta",
             value=avg_quality,
             domain={'x': [0, 1], 'y': [0, 1]},
-            delta={'reference': 95},
+            delta={'reference': 95, 'font': {'color': COLORS['text']}},
+            number={'font': {'size': 40, 'color': COLORS['text']}},
             gauge={
-                'axis': {'range': [None, 100]},
-                'bar': {'color': "#667eea"},
+                'axis': {'range': [None, 100], 'tickcolor': COLORS['text']},
+                'bar': {'color': COLORS['primary']},
                 'steps': [
                     {'range': [0, 70], 'color': "#ffcdd2"},
                     {'range': [70, 90], 'color': "#fff9c4"},
@@ -495,22 +667,24 @@ def show_realtime_pipeline(grievances, energy, traffic, waste):
                     'thickness': 0.75,
                     'value': 95
                 }
-            }
+            },
+            title={'text': "Avg Data Quality", 'font': {'color': COLORS['text']}}
         ))
-        fig.update_layout(title="Avg Data Quality", height=350)
-        st.plotly_chart(fig, use_container_width=True)
+        fig.update_layout(paper_bgcolor='white', height=350)
+        st.plotly_chart(fig, use_container_width=True, config=CHART_CONFIG)
     
     st.markdown("---")
     
-    # Processing stages
     st.markdown("### 🔄 Processing Pipeline Stages")
     
     col1, col2, col3 = st.columns(3)
     
+    total_records = len(traffic) + len(energy) + len(waste) + len(grievances)
+    
     with col1:
         st.markdown('<div class="pipeline-box">', unsafe_allow_html=True)
         st.markdown("**STAGE 1: Ingestion**")
-        st.metric("Records Received", f"{len(traffic) + len(energy) + len(waste) + len(grievances):,}")
+        st.metric("Records Received", f"{total_records:,}")
         st.metric("Validation Rate", "99.1%")
         st.progress(0.99)
         st.markdown('</div>', unsafe_allow_html=True)
@@ -518,7 +692,7 @@ def show_realtime_pipeline(grievances, energy, traffic, waste):
     with col2:
         st.markdown('<div class="processing-box">', unsafe_allow_html=True)
         st.markdown("**STAGE 2: Processing**")
-        st.metric("Records Processed", f"{int((len(traffic) + len(energy) + len(waste) + len(grievances)) * 0.98):,}")
+        st.metric("Records Processed", f"{int(total_records * 0.98):,}")
         st.metric("Transform Rate", "98.5%")
         st.progress(0.985)
         st.markdown('</div>', unsafe_allow_html=True)
@@ -526,42 +700,17 @@ def show_realtime_pipeline(grievances, energy, traffic, waste):
     with col3:
         st.markdown('<div class="pipeline-box">', unsafe_allow_html=True)
         st.markdown("**STAGE 3: Storage**")
-        st.metric("Records Stored", f"{int((len(traffic) + len(energy) + len(waste) + len(grievances)) * 0.97):,}")
+        st.metric("Records Stored", f"{int(total_records * 0.97):,}")
         st.metric("Storage Rate", "97.8%")
         st.progress(0.978)
         st.markdown('</div>', unsafe_allow_html=True)
-    
-    # Recent pipeline events
-    st.markdown("### 📋 Recent Pipeline Events")
-    
-    pipeline_events = [
-        {"time": "2s ago", "stage": "Ingestion", "event": "Batch processed: 1,247 records from Citizen Apps", "status": "✅"},
-        {"time": "5s ago", "stage": "Processing", "event": "Data quality check passed for Traffic Sensors", "status": "✅"},
-        {"time": "8s ago", "stage": "Storage", "event": "Successfully stored 2,156 records to Structured Storage", "status": "✅"},
-        {"time": "15s ago", "stage": "Processing", "event": "Anomaly detected in Pollution Sensor data - flagged for review", "status": "⚠️"},
-        {"time": "22s ago", "stage": "Ingestion", "event": "High throughput: 3,421 records/sec from CCTV Feeds", "status": "ℹ️"},
-        {"time": "35s ago", "stage": "Storage", "event": "Database optimization completed - query time improved by 23%", "status": "✅"}
-    ]
-    
-    for event in pipeline_events:
-        col1, col2, col3, col4 = st.columns([1, 2, 6, 1])
-        with col1:
-            st.text(event['time'])
-        with col2:
-            st.text(event['stage'])
-        with col3:
-            st.text(event['event'])
-        with col4:
-            st.text(event['status'])
 
 def show_event_processing(grievances, energy, traffic, waste):
     st.title("🎯 Event Processing & Rule Engine")
     st.markdown("### Intelligent Event Detection & Automated Response")
     
-    # Detect events
     events = detect_events(grievances, energy, traffic, waste)
     
-    # Event summary
     col1, col2, col3, col4 = st.columns(4)
     
     critical_count = len([e for e in events if e['type'] == 'CRITICAL'])
@@ -578,7 +727,6 @@ def show_event_processing(grievances, energy, traffic, waste):
     
     st.markdown("---")
     
-    # Event distribution
     col1, col2 = st.columns(2)
     
     with col1:
@@ -586,22 +734,28 @@ def show_event_processing(grievances, energy, traffic, waste):
         fig = px.pie(event_by_domain, values='count', names='domain',
                     title='Events by Domain',
                     color_discrete_sequence=px.colors.sequential.RdBu)
-        st.plotly_chart(fig, use_container_width=True)
+        fig.update_traces(textfont=dict(size=14, color='white'))
+        fig.update_layout(**create_chart_layout("Events by Domain"))
+        st.plotly_chart(fig, use_container_width=True, config=CHART_CONFIG)
     
     with col2:
         event_by_type = pd.DataFrame(events).groupby('type').size().reset_index(name='count')
-        fig = px.bar(event_by_type, x='type', y='count',
-                    title='Events by Severity',
-                    color='type',
-                    color_discrete_map={'CRITICAL': '#ff4444', 'WARNING': '#ffbb33'})
-        st.plotly_chart(fig, use_container_width=True)
+        fig = go.Figure()
+        fig.add_trace(go.Bar(
+            x=event_by_type['type'],
+            y=event_by_type['count'],
+            marker_color=[COLORS['danger'] if t == 'CRITICAL' else COLORS['warning'] for t in event_by_type['type']],
+            text=event_by_type['count'],
+            textposition='auto',
+            textfont=dict(color='white', size=14)
+        ))
+        fig.update_layout(**create_chart_layout("Events by Severity", "Type", "Count"))
+        st.plotly_chart(fig, use_container_width=True, config=CHART_CONFIG)
     
     st.markdown("---")
-    
-    # Live event feed
     st.markdown("### 🔴 Live Event Feed")
     
-    for event in events[:15]:
+    for event in events[:10]:
         col1, col2, col3 = st.columns([1, 3, 2])
         
         with col1:
@@ -618,78 +772,11 @@ def show_event_processing(grievances, energy, traffic, waste):
             st.markdown(f"✅ **Action**: {event['action']}")
         
         st.markdown("---")
-    
-    # Rule configuration
-    st.markdown("### ⚙️ Active Processing Rules")
-    
-    rules = [
-        {
-            "id": "R001",
-            "name": "Critical Traffic Congestion",
-            "condition": "Congestion Index > 85",
-            "action": "Deploy traffic management + Notify authorities",
-            "priority": "High",
-            "triggers": 12
-        },
-        {
-            "id": "R002",
-            "name": "Power Outage Detection",
-            "condition": "Power_Cut_Flag = 1",
-            "action": "Emergency restoration + Citizen notification",
-            "priority": "Critical",
-            "triggers": 3
-        },
-        {
-            "id": "R003",
-            "name": "Waste Overflow Warning",
-            "condition": "Bin Fill Level > 85%",
-            "action": "Schedule priority pickup",
-            "priority": "Medium",
-            "triggers": 8
-        },
-        {
-            "id": "R004",
-            "name": "SLA Breach Alert",
-            "condition": "SLA Days <= 1 AND Status = Open",
-            "action": "Escalate to supervisor",
-            "priority": "High",
-            "triggers": 15
-        },
-        {
-            "id": "R005",
-            "name": "Voltage Fluctuation",
-            "condition": "Grid Voltage < 220V",
-            "action": "Log incident + Maintenance alert",
-            "priority": "Medium",
-            "triggers": 6
-        }
-    ]
-    
-    rules_df = pd.DataFrame(rules)
-    
-    fig = go.Figure(data=[go.Table(
-        header=dict(
-            values=['Rule ID', 'Rule Name', 'Condition', 'Action', 'Priority', 'Triggers (24h)'],
-            fill_color='#667eea',
-            font=dict(color='white', size=12),
-            align='left'
-        ),
-        cells=dict(
-            values=[rules_df[col] for col in rules_df.columns],
-            fill_color='lavender',
-            align='left',
-            font_size=11,
-            height=35
-        )
-    )])
-    fig.update_layout(height=300)
-    st.plotly_chart(fig, use_container_width=True)
 
 def show_ml_analytics(grievances, energy, traffic, waste):
     st.title("🤖 ML Analytics & Predictive Models")
     st.markdown("### AI-Powered Insights and Forecasting")
     
-    # ML Model Status
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
@@ -703,20 +790,13 @@ def show_ml_analytics(grievances, energy, traffic, waste):
     
     st.markdown("---")
     
-    # Predictive models
-    st.markdown("### 🎯 Deployed Prediction Models")
-    
     col1, col2 = st.columns(2)
     
     with col1:
         st.markdown('<div class="recommendation">', unsafe_allow_html=True)
         st.markdown("**Traffic Congestion Predictor**")
-        st.markdown("- **Model**: Gradient Boosting")
-        st.markdown("- **Accuracy**: 92.7%")
-        st.markdown("- **Features**: Time, Zone, Weather, Events")
-        st.markdown("- **Prediction Horizon**: 2 hours")
+        st.markdown("- **Model**: Gradient Boosting\n- **Accuracy**: 92.7%\n- **Features**: Time, Zone, Weather, Events\n- **Prediction Horizon**: 2 hours")
         
-        # Simulated prediction
         future_hours = list(range(24))
         predicted_congestion = [30 + 40*np.sin((h-9)*np.pi/12) + np.random.randint(-5, 5) for h in future_hours]
         
@@ -726,22 +806,20 @@ def show_ml_analytics(grievances, energy, traffic, waste):
             y=predicted_congestion,
             mode='lines+markers',
             name='Predicted Congestion',
-            line=dict(color='#ff6b6b', width=3)
+            line=dict(color=COLORS['traffic'], width=3),
+            marker=dict(size=8)
         ))
-        fig.add_hline(y=70, line_dash="dash", line_color="red", annotation_text="Critical Threshold")
-        fig.update_layout(title="24-Hour Traffic Forecast", xaxis_title="Hour", yaxis_title="Congestion Index", height=300)
-        st.plotly_chart(fig, use_container_width=True)
+        fig.add_hline(y=70, line_dash="dash", line_color="red",
+                     annotation=dict(text="Critical Threshold", font=dict(color=COLORS['text'])))
+        fig.update_layout(**create_chart_layout("24-Hour Traffic Forecast", "Hour", "Congestion Index", 300))
+        st.plotly_chart(fig, use_container_width=True, config=CHART_CONFIG)
         st.markdown('</div>', unsafe_allow_html=True)
     
     with col2:
         st.markdown('<div class="recommendation">', unsafe_allow_html=True)
         st.markdown("**Energy Demand Forecaster**")
-        st.markdown("- **Model**: LSTM Neural Network")
-        st.markdown("- **Accuracy**: 95.2%")
-        st.markdown("- **Features**: Historical usage, Temperature, Day type")
-        st.markdown("- **Prediction Horizon**: 24 hours")
+        st.markdown("- **Model**: LSTM Neural Network\n- **Accuracy**: 95.2%\n- **Features**: Historical usage, Temperature, Day type\n- **Prediction Horizon**: 24 hours")
         
-        # Simulated prediction
         daily_energy = energy.groupby('Hour')['Energy_Consumption_kWh'].mean()
         future_energy = [daily_energy.mean() + 500*np.sin((h-6)*np.pi/12) + np.random.randint(-100, 100) for h in future_hours]
         
@@ -751,73 +829,15 @@ def show_ml_analytics(grievances, energy, traffic, waste):
             y=future_energy,
             mode='lines+markers',
             name='Predicted Demand',
-            line=dict(color='#4ecdc4', width=3),
-            fill='tonexty'
+            line=dict(color=COLORS['energy'], width=3),
+            fill='tozeroy',
+            marker=dict(size=8)
         ))
-        fig.update_layout(title="24-Hour Energy Demand Forecast", xaxis_title="Hour", yaxis_title="Energy (kWh)", height=300)
-        st.plotly_chart(fig, use_container_width=True)
+        fig.update_layout(**create_chart_layout("24-Hour Energy Demand Forecast", "Hour", "Energy (kWh)", 300))
+        st.plotly_chart(fig, use_container_width=True, config=CHART_CONFIG)
         st.markdown('</div>', unsafe_allow_html=True)
     
     st.markdown("---")
-    
-    # Anomaly detection
-    st.markdown("### 🔍 Anomaly Detection Results")
-    
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        # Traffic anomalies
-        st.markdown("**Traffic Pattern Anomalies**")
-        anomaly_data = traffic.groupby('Hour')['Congestion_Index'].agg(['mean', 'std']).reset_index()
-        anomaly_data['upper'] = anomaly_data['mean'] + 2*anomaly_data['std']
-        anomaly_data['lower'] = anomaly_data['mean'] - 2*anomaly_data['std']
-        
-        actual_traffic = traffic.groupby('Hour')['Congestion_Index'].mean().reset_index()
-        
-        fig = go.Figure()
-        fig.add_trace(go.Scatter(x=anomaly_data['Hour'], y=anomaly_data['upper'], 
-                                fill=None, mode='lines', line_color='lightgray', name='Normal Range'))
-        fig.add_trace(go.Scatter(x=anomaly_data['Hour'], y=anomaly_data['lower'],
-                                fill='tonexty', mode='lines', line_color='lightgray', showlegend=False))
-        fig.add_trace(go.Scatter(x=actual_traffic['Hour'], y=actual_traffic['Congestion_Index'],
-                                mode='markers', name='Actual', marker=dict(size=10, color='#667eea')))
-        
-        # Highlight anomalies
-        anomalies = actual_traffic[(actual_traffic['Congestion_Index'] > anomaly_data['upper'].values) | 
-                                  (actual_traffic['Congestion_Index'] < anomaly_data['lower'].values)]
-        if len(anomalies) > 0:
-            fig.add_trace(go.Scatter(x=anomalies['Hour'], y=anomalies['Congestion_Index'],
-                                    mode='markers', name='Anomalies', 
-                                    marker=dict(size=15, color='red', symbol='x')))
-        
-        fig.update_layout(title="Traffic Anomaly Detection", height=350)
-        st.plotly_chart(fig, use_container_width=True)
-        
-        if len(anomalies) > 0:
-            st.warning(f"⚠️ {len(anomalies)} anomalies detected requiring investigation")
-    
-    with col2:
-        # Waste collection optimization
-        st.markdown("**Waste Collection Route Optimization**")
-        
-        zone_waste = waste.groupby('Zone_Name')['Total_Waste_Collected_Kg'].mean().reset_index()
-        zone_waste['Optimized_Routes'] = [2, 3, 2, 3, 2, 3]
-        zone_waste['Current_Routes'] = [3, 4, 3, 4, 3, 4]
-        zone_waste['Savings_%'] = ((zone_waste['Current_Routes'] - zone_waste['Optimized_Routes']) / zone_waste['Current_Routes'] * 100).round(1)
-        
-        fig = go.Figure()
-        fig.add_trace(go.Bar(x=zone_waste['Zone_Name'], y=zone_waste['Current_Routes'],
-                            name='Current Routes', marker_color='#ff6b6b'))
-        fig.add_trace(go.Bar(x=zone_waste['Zone_Name'], y=zone_waste['Optimized_Routes'],
-                            name='ML-Optimized Routes', marker_color='#51cf66'))
-        
-        fig.update_layout(title="Route Optimization by ML", barmode='group', height=350)
-        st.plotly_chart(fig, use_container_width=True)
-        
-        total_savings = zone_waste['Savings_%'].mean()
-        st.success(f"✅ Average route savings: {total_savings:.1f}% - Estimated cost reduction: ₹2.3L/month")
-    
-    # Feature importance
     st.markdown("### 📊 Model Feature Importance")
     
     features = pd.DataFrame({
@@ -825,17 +845,28 @@ def show_ml_analytics(grievances, energy, traffic, waste):
         'Importance': [0.28, 0.22, 0.18, 0.15, 0.08, 0.05, 0.03, 0.01]
     })
     
-    fig = px.bar(features, x='Importance', y='Feature', orientation='h',
-                title='Traffic Prediction Model - Feature Importance',
-                color='Importance', color_continuous_scale='Blues')
-    fig.update_layout(height=400)
-    st.plotly_chart(fig, use_container_width=True)
+    fig = go.Figure()
+    fig.add_trace(go.Bar(
+        x=features['Importance'],
+        y=features['Feature'],
+        orientation='h',
+        marker=dict(
+            color=features['Importance'],
+            colorscale='Blues',
+            showscale=True,
+            colorbar=dict(title=dict(text="Importance", font=dict(color=COLORS['text'])))
+        ),
+        text=features['Importance'].round(2),
+        textposition='auto',
+        textfont=dict(color='white')
+    ))
+    fig.update_layout(**create_chart_layout("Traffic Prediction Model - Feature Importance", "Importance", "Feature"))
+    st.plotly_chart(fig, use_container_width=True, config=CHART_CONFIG)
 
 def show_automated_actions(kpis, grievances, energy, traffic, waste):
     st.title("🚨 Automated Decision Engine")
     st.markdown("### Real-Time Automated Actions & Responses")
     
-    # Action summary
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
@@ -849,69 +880,6 @@ def show_automated_actions(kpis, grievances, energy, traffic, waste):
     
     st.markdown("---")
     
-    # Recent automated actions
-    st.markdown("### ⚡ Recent Automated Actions")
-    
-    actions = [
-        {
-            "time": "32s ago",
-            "trigger": "Critical congestion at Hinjewadi",
-            "decision": "Optimize traffic signals",
-            "action": "Signal timing adjusted: +30s green on main route",
-            "status": "✅ Executed",
-            "impact": "Congestion reduced by 12%"
-        },
-        {
-            "time": "2m ago",
-            "trigger": "Power outage in Hadapsar",
-            "decision": "Emergency restoration protocol",
-            "action": "Backup grid activated + Technician dispatched",
-            "status": "✅ Executed",
-            "impact": "Power restored in 8 minutes"
-        },
-        {
-            "time": "5m ago",
-            "trigger": "Bin overflow alert - Kothrud",
-            "decision": "Priority waste collection",
-            "action": "Nearest truck diverted to location",
-            "status": "🚛 In Progress",
-            "impact": "ETA: 12 minutes"
-        },
-        {
-            "time": "8m ago",
-            "trigger": "SLA breach imminent - Ticket PMC46535",
-            "decision": "Escalate to supervisor",
-            "action": "Case assigned to senior officer + Citizen notified",
-            "status": "✅ Executed",
-            "impact": "Issue resolved before SLA breach"
-        },
-        {
-            "time": "15m ago",
-            "trigger": "Unusual traffic pattern detected",
-            "decision": "Event verification",
-            "action": "CCTV feed analyzed + No accident found",
-            "status": "✅ Completed",
-            "impact": "False alarm - System learning updated"
-        }
-    ]
-    
-    for action in actions:
-        with st.expander(f"**{action['time']}** - {action['trigger']}"):
-            col1, col2 = st.columns(2)
-            
-            with col1:
-                st.markdown(f"**🎯 Decision Made:** {action['decision']}")
-                st.markdown(f"**⚙️ Action Taken:** {action['action']}")
-            
-            with col2:
-                st.markdown(f"**Status:** {action['status']}")
-                st.markdown(f"**📊 Impact:** {action['impact']}")
-    
-    st.markdown("---")
-    
-    # Action categories
-    st.markdown("### 📊 Actions by Category")
-    
     col1, col2 = st.columns(2)
     
     with col1:
@@ -923,7 +891,9 @@ def show_automated_actions(kpis, grievances, energy, traffic, waste):
         fig = px.pie(action_categories, values='Count', names='Category',
                     title='Actions Distribution (Last 24h)',
                     color_discrete_sequence=px.colors.sequential.RdBu)
-        st.plotly_chart(fig, use_container_width=True)
+        fig.update_traces(textfont=dict(size=14, color='white'))
+        fig.update_layout(**create_chart_layout("Actions Distribution"))
+        st.plotly_chart(fig, use_container_width=True, config=CHART_CONFIG)
     
     with col2:
         success_data = pd.DataFrame({
@@ -931,246 +901,29 @@ def show_automated_actions(kpis, grievances, energy, traffic, waste):
             'Count': [238, 5, 1, 3]
         })
         
-        fig = px.bar(success_data, x='Outcome', y='Count',
-                    title='Action Outcomes (Last 24h)',
-                    color='Outcome',
-                    color_discrete_map={
-                        'Successful': '#51cf66',
-                        'In Progress': '#ffd43b',
-                        'Failed': '#ff6b6b',
-                        'Manual Override': '#667eea'
-                    })
-        st.plotly_chart(fig, use_container_width=True)
-    
-    # Decision rules
-    st.markdown("### 🎯 Active Decision Rules")
-    
-    decision_rules = [
-        {
-            "rule": "DR001",
-            "condition": "IF Congestion > 85 THEN",
-            "action": "Adjust traffic signals + Alert traffic police",
-            "confidence": "95%",
-            "executions": 89
-        },
-        {
-            "rule": "DR002",
-            "condition": "IF Power_Cut = True THEN",
-            "action": "Activate backup + Dispatch technician + Notify citizens",
-            "confidence": "98%",
-            "executions": 45
-        },
-        {
-            "rule": "DR003",
-            "condition": "IF Bin_Fill > 85% THEN",
-            "action": "Schedule priority pickup within 2 hours",
-            "confidence": "92%",
-            "executions": 67
-        },
-        {
-            "rule": "DR004",
-            "condition": "IF SLA_Days <= 1 AND Status = Open THEN",
-            "action": "Escalate + Assign senior officer + Notify citizen",
-            "confidence": "97%",
-            "executions": 38
+        color_map = {
+            'Successful': COLORS['success'],
+            'In Progress': COLORS['warning'],
+            'Failed': COLORS['danger'],
+            'Manual Override': COLORS['primary']
         }
-    ]
-    
-    rules_df = pd.DataFrame(decision_rules)
-    
-    fig = go.Figure(data=[go.Table(
-        header=dict(
-            values=['Rule ID', 'Condition', 'Automated Action', 'Confidence', 'Executions (24h)'],
-            fill_color='#667eea',
-            font=dict(color='white', size=12),
-            align='left'
-        ),
-        cells=dict(
-            values=[rules_df[col] for col in rules_df.columns],
-            fill_color='lavender',
-            align='left',
-            font_size=11,
-            height=40
-        )
-    )])
-    fig.update_layout(height=300)
-    st.plotly_chart(fig, use_container_width=True)
-    
-    # External integrations
-    st.markdown("### 🔗 External System Notifications")
-    
-    col1, col2, col3 = st.columns(3)
-    
-    with col1:
-        st.markdown('<div class="alert-success">', unsafe_allow_html=True)
-        st.markdown("**🚓 Traffic Police**")
-        st.markdown("- 12 congestion alerts sent")
-        st.markdown("- 8 responses received")
-        st.markdown("- Avg response: 4.2 min")
-        st.markdown('</div>', unsafe_allow_html=True)
-    
-    with col2:
-        st.markdown('<div class="alert-success">', unsafe_allow_html=True)
-        st.markdown("**⚡ Power Department**")
-        st.markdown("- 3 outage notifications")
-        st.markdown("- 3 restorations completed")
-        st.markdown("- Avg downtime: 11 min")
-        st.markdown('</div>', unsafe_allow_html=True)
-    
-    with col3:
-        st.markdown('<div class="alert-success">', unsafe_allow_html=True)
-        st.markdown("**📱 Citizen App**")
-        st.markdown("- 156 status updates sent")
-        st.markdown("- 89% read rate")
-        st.markdown("- Satisfaction: 4.3/5")
-        st.markdown('</div>', unsafe_allow_html=True)
-
-def show_executive_dashboard(kpis, grievances, energy, traffic, waste):
-    st.title("📊 Executive Dashboard")
-    st.markdown("### City Operations Command Center")
-    
-    # Top KPIs
-    col1, col2, col3, col4, col5 = st.columns(5)
-    
-    with col1:
-        st.metric(
-            "Avg Energy Load",
-            f"{kpis['avg_energy']/1000:.2f}K kWh",
-            delta=f"{-5.2}%" if kpis['power_cuts'] > 10 else f"+2.1%"
-        )
-    
-    with col2:
-        st.metric(
-            "Traffic Flow Efficiency",
-            f"{kpis['flow_efficiency']:.2%}",
-            delta=f"{-8}%" if kpis['avg_congestion'] > 50 else f"+3%"
-        )
-    
-    with col3:
-        st.metric(
-            "Critical Issues",
-            f"{kpis['critical_issues']}",
-            delta=f"+{kpis['critical_issues']}" if kpis['critical_issues'] > 0 else "0",
-            delta_color="inverse"
-        )
-    
-    with col4:
-        st.metric(
-            "Grievance Resolution",
-            f"{kpis['resolution_rate']:.1%}",
-            delta=f"+{5}%" if kpis['resolution_rate'] > 0.6 else f"-{3}%"
-        )
-    
-    with col5:
-        st.metric(
-            "Avg Bin Fill Level",
-            f"{kpis['avg_bin_fill']:.1f}%",
-            delta=f"-{2}%" if kpis['avg_bin_fill'] < 70 else f"+{4}%",
-            delta_color="inverse"
-        )
-    
-    st.markdown("---")
-    
-    # Main visualizations
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        # Zone Stress Factor
-        st.markdown("### 🗺️ Zone Stress Factor")
-        zone_stress_df = pd.DataFrame(list(kpis['zone_stress'].items()), columns=['Zone', 'Stress'])
-        zone_stress_df = zone_stress_df.sort_values('Stress', ascending=False)
-        
-        fig = go.Figure(data=[
-            go.Bar(
-                x=zone_stress_df['Stress'],
-                y=zone_stress_df['Zone'],
-                orientation='h',
-                marker=dict(
-                    color=zone_stress_df['Stress'],
-                    colorscale='RdYlGn_r',
-                    showscale=True,
-                    colorbar=dict(title="Stress Level")
-                ),
-                text=zone_stress_df['Stress'].round(0),
-                textposition='auto'
-            )
-        ])
-        fig.update_layout(
-            title="Composite Zone Stress Index",
-            xaxis_title="Stress Score",
-            yaxis_title="Zone",
-            height=400
-        )
-        st.plotly_chart(fig, use_container_width=True)
-    
-    with col2:
-        # Traffic Peak Hours
-        st.markdown("### 🚦 Traffic Congestion by Hour")
-        hourly_traffic = traffic.groupby('Hour')['Congestion_Index'].mean().reset_index()
         
         fig = go.Figure()
-        fig.add_trace(go.Scatter(
-            x=hourly_traffic['Hour'],
-            y=hourly_traffic['Congestion_Index'],
-            mode='lines+markers',
-            fill='tozeroy',
-            line=dict(color='#ff6b6b', width=3),
-            marker=dict(size=8)
+        fig.add_trace(go.Bar(
+            x=success_data['Outcome'],
+            y=success_data['Count'],
+            marker_color=[color_map[o] for o in success_data['Outcome']],
+            text=success_data['Count'],
+            textposition='auto',
+            textfont=dict(color='white', size=14)
         ))
-        fig.add_hline(y=70, line_dash="dash", line_color="red", annotation_text="Critical Threshold")
-        fig.update_layout(
-            title="Average Congestion Throughout the Day",
-            xaxis_title="Hour of Day",
-            yaxis_title="Congestion Index",
-            height=400
-        )
-        st.plotly_chart(fig, use_container_width=True)
-    
-    # Bottom row
-    col1, col2, col3 = st.columns(3)
-    
-    with col1:
-        # Energy consumption trend
-        st.markdown("### ⚡ Energy Consumption Trend")
-        daily_energy = energy.groupby('Date')['Energy_Consumption_kWh'].mean().reset_index()
-        
-        fig = px.line(daily_energy, x='Date', y='Energy_Consumption_kWh',
-                     title="Daily Average Energy Consumption")
-        fig.update_traces(line_color='#4ecdc4', line_width=3)
-        fig.update_layout(height=300)
-        st.plotly_chart(fig, use_container_width=True)
-    
-    with col2:
-        # Grievance status
-        st.markdown("### 🎫 Grievance Status Distribution")
-        status_counts = grievances['Status'].value_counts()
-        
-        fig = go.Figure(data=[go.Pie(
-            labels=status_counts.index,
-            values=status_counts.values,
-            hole=0.4,
-            marker=dict(colors=['#51cf66', '#ffd43b', '#ff6b6b'])
-        )])
-        fig.update_layout(height=300)
-        st.plotly_chart(fig, use_container_width=True)
-    
-    with col3:
-        # Waste segregation efficiency
-        st.markdown("### ♻️ Waste Segregation by Zone")
-        zone_segregation = waste.groupby('Zone_Name')['Segregation_Efficiency_Percent'].mean().reset_index()
-        
-        fig = px.bar(zone_segregation, x='Zone_Name', y='Segregation_Efficiency_Percent',
-                    title="Average Segregation Efficiency")
-        fig.add_hline(y=80, line_dash="dash", line_color="green", annotation_text="Target: 80%")
-        fig.update_layout(height=300, showlegend=False)
-        fig.update_traces(marker_color='#95e1d3')
-        st.plotly_chart(fig, use_container_width=True)
+        fig.update_layout(**create_chart_layout("Action Outcomes (Last 24h)", "Outcome", "Count"))
+        st.plotly_chart(fig, use_container_width=True, config=CHART_CONFIG)
 
 def show_advanced_insights(grievances, energy, traffic, waste):
     st.title("📈 Advanced Cross-Domain Insights")
     st.markdown("### Deep Dive Analytics & Pattern Discovery")
     
-    # Correlation Analysis
     st.markdown("#### 🔗 Inter-Domain Correlation Matrix")
     
     daily_traffic = traffic.groupby(['Date', 'Zone_Name'])['Congestion_Index'].mean().reset_index()
@@ -1193,13 +946,12 @@ def show_advanced_insights(grievances, energy, traffic, waste):
         zmid=0,
         text=corr_matrix.values.round(2),
         texttemplate='%{text}',
-        textfont={"size": 12},
-        colorbar=dict(title="Correlation")
+        textfont={"size": 14, "color": "white"},
+        colorbar=dict(title=dict(text="Correlation", font=dict(color=COLORS['text'])))
     ))
-    fig.update_layout(title="Cross-Domain Correlation Analysis", height=500)
-    st.plotly_chart(fig, use_container_width=True)
+    fig.update_layout(**create_chart_layout("Cross-Domain Correlation Analysis", height=500))
+    st.plotly_chart(fig, use_container_width=True, config=CHART_CONFIG)
     
-    # Insights
     col1, col2 = st.columns(2)
     
     with col1:
@@ -1219,35 +971,11 @@ def show_advanced_insights(grievances, energy, traffic, waste):
         else:
             st.markdown("Waste management and grievances show independent patterns. Multi-factor analysis needed.")
         st.markdown('</div>', unsafe_allow_html=True)
-    
-    # Department Performance
-    st.markdown("### 🏢 Department-wise Performance Metrics")
-    
-    dept_metrics = grievances.groupby('Department').agg({
-        'Ticket_ID': 'count',
-        'SLA_Days': 'mean',
-        'Status': lambda x: (x == 'Resolved').sum() / len(x)
-    }).reset_index()
-    dept_metrics.columns = ['Department', 'Total_Tickets', 'Avg_Resolution_Time', 'Resolution_Rate']
-    
-    fig = make_subplots(
-        rows=1, cols=3,
-        subplot_titles=('Total Tickets', 'Avg Resolution Time (days)', 'Resolution Rate'),
-        specs=[[{'type': 'bar'}, {'type': 'bar'}, {'type': 'bar'}]]
-    )
-    
-    fig.add_trace(go.Bar(x=dept_metrics['Department'], y=dept_metrics['Total_Tickets'], name='Tickets', marker_color='#667eea'), row=1, col=1)
-    fig.add_trace(go.Bar(x=dept_metrics['Department'], y=dept_metrics['Avg_Resolution_Time'], name='Days', marker_color='#f093fb'), row=1, col=2)
-    fig.add_trace(go.Bar(x=dept_metrics['Department'], y=dept_metrics['Resolution_Rate'], name='Rate', marker_color='#4facfe'), row=1, col=3)
-    
-    fig.update_layout(height=400, showlegend=False)
-    st.plotly_chart(fig, use_container_width=True)
 
 def show_recommendations(kpis, grievances, energy, traffic, waste):
     st.title("💡 AI-Powered Recommendations")
     st.markdown("### Actionable Insights for City Administrators")
     
-    # Priority recommendations
     st.markdown("### 🎯 Priority Action Items")
     
     recommendations = []
@@ -1296,18 +1024,6 @@ def show_recommendations(kpis, grievances, energy, traffic, waste):
             'timeline': 'Immediate'
         })
     
-    if kpis['avg_segregation'] < 75:
-        recommendations.append({
-            'priority': 'MEDIUM',
-            'category': 'Waste',
-            'title': 'Launch Waste Segregation Awareness Campaign',
-            'description': f"Segregation efficiency at {kpis['avg_segregation']:.1f}%. Conduct citizen education programs.",
-            'impact': 'Increase recycling rate by 20%',
-            'cost': 'Low',
-            'timeline': '1-2 months'
-        })
-    
-    # Display recommendations
     for idx, rec in enumerate(recommendations, 1):
         with st.expander(f"**{idx}. {rec['title']}** - Priority: {rec['priority']}", expanded=(rec['priority']=='HIGH')):
             col1, col2 = st.columns([3, 1])
@@ -1320,14 +1036,12 @@ def show_recommendations(kpis, grievances, energy, traffic, waste):
             with col2:
                 st.markdown(f"**Cost:** {rec['cost']}")
                 st.markdown(f"**Timeline:** {rec['timeline']}")
-            
-            st.divider()
     
-    # ROI analysis
+    st.markdown("---")
     st.markdown("### 💰 Return on Investment Analysis")
     
     roi_data = pd.DataFrame({
-        'Initiative': ['Dynamic Traffic Signals', 'Grid Modernization', 'Smart Bin System', 'Mobile App for Grievances'],
+        'Initiative': ['Dynamic Traffic Signals', 'Grid Modernization', 'Smart Bin System', 'Mobile App'],
         'Investment (₹ Cr)': [12, 50, 8, 3],
         'Annual Savings (₹ Cr)': [8, 15, 6, 2],
         'Payback Period (Years)': [1.5, 3.3, 1.3, 1.5],
@@ -1336,21 +1050,22 @@ def show_recommendations(kpis, grievances, energy, traffic, waste):
     
     fig = go.Figure(data=[go.Table(
         header=dict(
-            values=list(roi_data.columns),
-            fill_color='#667eea',
+            values=['<b>' + col + '</b>' for col in roi_data.columns],
+            fill_color=COLORS['primary'],
             font=dict(color='white', size=14),
-            align='left'
+            align='left',
+            height=40
         ),
         cells=dict(
             values=[roi_data[col] for col in roi_data.columns],
-            fill_color='lavender',
+            fill_color='#f0f2f6',
+            font=dict(color=COLORS['text'], size=12),
             align='left',
-            font_size=12,
-            height=30
+            height=35
         )
     )])
-    fig.update_layout(height=300)
-    st.plotly_chart(fig, use_container_width=True)
+    fig.update_layout(margin=dict(l=0, r=0, t=20, b=0), height=250, paper_bgcolor='white')
+    st.plotly_chart(fig, use_container_width=True, config=CHART_CONFIG)
 
 if __name__ == "__main__":
     main()
