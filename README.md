@@ -273,4 +273,4 @@ Vishleshan/
 
 ---
 
-**Built with ❤️ for Vishleshan Competition 2026**
+**Built with ❤️ for IIM Indore's Vishleshan Competition 2026**
