@@ -192,12 +192,26 @@ def load_data():
         st.error(f"Error loading data: {str(e)}")
         return None, None, None, None
 
-# Helper function to create styled layout
 def create_chart_layout(title, xaxis_title="", yaxis_title="", height=400):
     return dict(
-        title=dict(text=title, font=dict(size=16, color=COLORS['text'], family="Arial, sans-serif")),
-        xaxis=dict(title=xaxis_title, gridcolor='#e0e0e0', titlefont=dict(color=COLORS['text'])),
-        yaxis=dict(title=yaxis_title, gridcolor='#e0e0e0', titlefont=dict(color=COLORS['text'])),
+        title=dict(
+            text=title,
+            font=dict(size=16, color=COLORS['text'], family="Arial, sans-serif")
+        ),
+        xaxis=dict(
+            title=dict(
+                text=xaxis_title,
+                font=dict(color=COLORS['text'])
+            ),
+            gridcolor='#e0e0e0'
+        ),
+        yaxis=dict(
+            title=dict(
+                text=yaxis_title,
+                font=dict(color=COLORS['text'])
+            ),
+            gridcolor='#e0e0e0'
+        ),
         height=height,
         template=CHART_TEMPLATE,
         paper_bgcolor='white',
@@ -205,6 +219,7 @@ def create_chart_layout(title, xaxis_title="", yaxis_title="", height=400):
         font=dict(color=COLORS['text'], family="Arial, sans-serif"),
         hovermode='closest'
     )
+
 
 # Calculate KPIs
 def calculate_kpis(grievances, energy, traffic, waste):
