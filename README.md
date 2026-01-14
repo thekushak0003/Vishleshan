@@ -10,7 +10,7 @@ A comprehensive data analytics platform for urban infrastructure management, bui
 1. Create a new GitHub repository
 2. Upload these files:
    ```
-   your-repo/
+   Vishleshan/
    ├── app.py
    ├── requirements.txt
    ├── pune_citizen_grievances.csv
@@ -21,52 +21,6 @@ A comprehensive data analytics platform for urban infrastructure management, bui
    │   └── config.toml
    └── README.md
    ```
-
-#### Step 2: Deploy to Streamlit Cloud
-1. Go to [share.streamlit.io](https://share.streamlit.io)
-2. Sign in with your GitHub account
-3. Click "New app"
-4. Select your repository
-5. Set main file path: `app.py`
-6. Click "Deploy"
-
-**Done! Your app will be live in 2-3 minutes.**
-
-#### Troubleshooting Deployment:
-- **If CSV files are large**: Use Git LFS or upload to cloud storage
-- **If deployment fails**: Check the logs in Streamlit Cloud dashboard
-- **Memory issues**: Optimize data loading or upgrade to Streamlit Cloud Pro
-
----
-
-### **Option 2: Local Deployment**
-
-#### Installation Steps:
-
-```bash
-# 1. Clone/download the project
-git clone <your-repo-url>
-cd smart-cities-analytics
-
-# 2. Create virtual environment (recommended)
-python -m venv venv
-
-# Windows
-venv\Scripts\activate
-
-# macOS/Linux
-source venv/bin/activate
-
-# 3. Install dependencies
-pip install -r requirements.txt
-
-# 4. Run the app
-streamlit run app.py
-```
-
-The app will open at `http://localhost:8501`
-
----
 
 ## 📊 **Key Features**
 
@@ -252,35 +206,6 @@ All charts now include:
 
 ---
 
-## 🚀 **Deployment Checklist**
-
-Before deploying, verify:
-
-- [ ] All 4 CSV files are present
-- [ ] requirements.txt is up to date
-- [ ] .streamlit/config.toml exists
-- [ ] app.py has no syntax errors
-- [ ] Test locally first with `streamlit run app.py`
-- [ ] GitHub repository is public or you have Pro account
-- [ ] Files are not too large (< 100MB each)
-
----
-
-## 📞 **Support**
-
-### For Deployment Issues:
-1. Check Streamlit Cloud logs
-2. Verify all files are in repository
-3. Ensure Python version is 3.8-3.11
-4. Check requirements.txt dependencies
-
-### For Data Issues:
-1. Verify CSV file format
-2. Check column names match exactly
-3. Ensure dates are in correct format (YYYY-MM-DD)
-
----
-
 ## 🎓 **Competition Alignment**
 
 This platform addresses all Vishleshan requirements:
@@ -321,7 +246,7 @@ This platform addresses all Vishleshan requirements:
 ## 📄 **File Structure**
 
 ```
-smart-cities-analytics/
+Vishleshan/
 │
 ├── app.py                          # Main application (production-ready)
 ├── requirements.txt                # Dependencies (minimal, stable)
@@ -348,32 +273,4 @@ smart-cities-analytics/
 
 ---
 
-## 🌐 **Deployment URLs**
-
-After deployment, your app will be available at:
-- Streamlit Cloud: `https://<your-app-name>.streamlit.app`
-- Local: `http://localhost:8501`
-
----
-
-## 💡 **Tips for Competition Judges**
-
-**Best Pages to Demonstrate:**
-1. **System Architecture** - Shows complete pipeline understanding
-2. **Executive Dashboard** - Demonstrates comprehensive KPIs
-3. **ML Analytics** - Highlights innovation
-4. **Automated Actions** - Shows real-world impact
-5. **Recommendations** - Proves decision-making value
-
-**Key Talking Points:**
-- End-to-end data pipeline from sensors to actions
-- Real-time event processing with automated responses
-- ML-powered predictions with 92-95% accuracy
-- ROI-driven recommendations with specific timelines
-- Scalable, production-ready architecture
-
----
-
-**Built with ❤️ for Vishleshan Competition 2025**
-
-*For questions or issues, check the troubleshooting section above.*
+**Built with ❤️ for IIM Indore's Vishleshan Competition 2026**
